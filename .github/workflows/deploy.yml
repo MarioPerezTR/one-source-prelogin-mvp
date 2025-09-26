@@ -39,7 +39,10 @@ jobs:
       run: npm ci
 
     - name: Build
-      run: npm run build
+      run: npm run build -- --base-href=/one-source-prelogin-mvp/
+
+    - name: Copy index.html to 404.html for GitHub Pages routing
+      run: cp ./dist/one-source-prelogin/browser/index.html ./dist/one-source-prelogin/browser/404.html
 
     - name: Setup Pages
       uses: actions/configure-pages@v4
@@ -47,7 +50,7 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
       with:
-        path: ./dist/one-source-prelogin
+        path: ./dist/one-source-prelogin/browser
 
   deploy:
     environment:
