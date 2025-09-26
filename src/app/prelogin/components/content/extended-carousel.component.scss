@@ -1,0 +1,254 @@
+// Using Saffron design tokens via CSS custom properties
+
+.extended-carousel {
+  background-color: var(--saf-color-data-viz-gold-100);
+  padding: var(--saf-spacing-11) var(--saf-spacing-7);
+  width: 100%;
+  min-height: 400px;
+  position: relative;
+
+  .carousel-container {
+    overflow: hidden;
+    border-radius: var(--saf-border-radius-md);
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto 24px;
+  }
+
+  .slides-wrapper {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slide {
+    width: calc(100% / 3);
+    flex-shrink: 0;
+
+    .slide-content {
+      display: flex;
+      gap: var(--saf-spacing-7);
+      align-items: center;
+      min-height: 400px;
+      padding: 0;
+    }
+
+    .text-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: var(--saf-spacing-4);
+
+      saf-text[role="heading"] {
+        margin: 0 0 var(--saf-spacing-4) 0;
+      }
+
+      saf-divider {
+        margin: 0 0 var(--saf-spacing-4) 0;
+      }
+
+      .description-container {
+        display: flex;
+        flex-direction: column;
+        gap: var(--saf-spacing-2);
+        height: 169px;
+        align-items: flex-start;
+        padding: 0 var(--saf-spacing-10) 0 0;
+
+        .button-area {
+          display: flex;
+          gap: var(--saf-spacing-4);
+          align-items: center;
+          padding: var(--saf-spacing-6) 0 0 0;
+        }
+      }
+    }
+
+    .image-content {
+      flex: 1;
+      min-height: 300px;
+      min-width: 300px;
+      position: relative;
+      border-radius: var(--saf-border-radius-sm);
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: var(--saf-border-radius-sm);
+      }
+    }
+
+    .cards-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: var(--saf-spacing-6);
+      align-items: flex-start;
+      justify-content: center;
+      min-height: 300px;
+      min-width: 300px;
+
+      .product-cards-list {
+        display: flex;
+        flex-direction: column;
+        gap: var(--saf-spacing-6);
+        width: 100%;
+
+        .product-card {
+          display: flex;
+          align-items: flex-start;
+          gap: var(--saf-spacing-2);
+          padding: var(--saf-spacing-6);
+          background-color: var(--saf-color-background-primary);
+          border: 1px solid var(--saf-color-border-subtle);
+          border-radius: var(--saf-border-radius-lg);
+          width: 100%;
+
+          .product-icon {
+            --saf-icon-color: var(--saf-color-icon-brand);
+            font-size: 24px;
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          .product-link {
+            font-family: var(--saf-font-family-heading);
+            font-size: var(--saf-font-size-lg);
+            font-weight: var(--saf-font-weight-medium);
+            line-height: var(--saf-line-height-tight);
+            color: var(--saf-color-text-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: var(--saf-spacing-1);
+            flex: 1;
+
+            &:hover {
+              color: var(--saf-color-text-brand);
+            }
+
+            saf-icon {
+              --saf-icon-color: var(--saf-color-icon-brand);
+              font-size: var(--saf-font-size-md);
+              flex-shrink: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .carousel-controls {
+    display: flex;
+    justify-content: flex-start;
+    gap: var(--saf-spacing-4);
+    margin-top: var(--saf-spacing-6);
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+
+    saf-button {
+      --saf-button-background-color: var(--saf-color-background-secondary);
+      --saf-button-text-color: var(--saf-color-text-primary);
+      --saf-button-border-color: var(--saf-color-border-subtle);
+
+      &:hover {
+        --saf-button-background-color: var(
+          --saf-color-background-secondary-hover
+        );
+      }
+
+      &[disabled] {
+        --saf-button-background-color: var(--saf-color-background-disabled);
+        --saf-button-text-color: var(--saf-color-text-disabled);
+        --saf-button-border-color: var(--saf-color-border-disabled);
+      }
+
+      saf-icon {
+        --saf-icon-color: currentColor;
+      }
+    }
+
+    .slide-indicator {
+      padding: var(--saf-spacing-2);
+
+      span {
+        font-family: var(--saf-font-family-body);
+        font-size: var(--saf-font-size-md);
+        font-weight: var(--saf-font-weight-regular);
+        color: var(--saf-color-text-secondary);
+        white-space: nowrap;
+      }
+    }
+  }
+
+  // Responsive design
+  @media (max-width: 1200px) {
+    padding: var(--saf-spacing-8) var(--saf-spacing-6);
+
+    .slide .slide-content {
+      gap: var(--saf-spacing-6);
+    }
+
+    .slide .text-content {
+      h2 {
+        font-size: var(--saf-font-size-3xl);
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    padding: var(--saf-spacing-6) var(--saf-spacing-4);
+
+    .slide .slide-content {
+      flex-direction: column;
+      text-align: center;
+      min-height: auto;
+    }
+
+    .slide .text-content {
+      .description-container {
+        padding-right: 0;
+      }
+    }
+
+    .slide .image-content,
+    .slide .cards-content {
+      width: 100%;
+      min-width: auto;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: var(--saf-spacing-4) var(--saf-spacing-3);
+
+    .slide .text-content {
+      h2 {
+        font-size: var(--saf-font-size-2xl);
+      }
+
+      .description-container {
+        .description {
+          font-size: var(--saf-font-size-md);
+        }
+      }
+    }
+
+    .slide .cards-content .product-cards-list .product-card {
+      padding: var(--saf-spacing-4);
+
+      .product-link {
+        font-size: var(--saf-font-size-md);
+      }
+    }
+  }
+}

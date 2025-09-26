@@ -1,0 +1,168 @@
+// Host component should not interfere with grid layout
+:host {
+  display: contents;
+}
+
+// Common card styles
+saf-card.quick-links-card,
+saf-card.news-card {
+  display: block;
+  height: fit-content;
+  width: 100%;
+  max-width: 678px;
+}
+
+// Quick Links Card (Left)
+saf-card.quick-links-card {
+  height: auto;
+
+  img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+  }
+
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--saf-spacing-2);
+  }
+
+  .links-list {
+    flex: 1;
+
+    saf-list {
+      margin: 0;
+
+      // Override default saf-list-item spacing
+      ::ng-deep saf-list-item {
+        margin-top: var(--saf-spacing-3);
+
+        &:first-child {
+          margin-top: var(--saf-spacing-4);
+        }
+      }
+
+      saf-list-item {
+        .quick-link {
+          display: inline-flex;
+          align-items: center;
+          line-height: 1.5;
+
+          saf-icon {
+            color: var(--saf-color-text-light);
+            padding-left: var(
+              --saf-spacing-1
+            ); // 4px spacing between anchor text and icon
+          }
+        }
+      }
+    }
+  }
+}
+
+// Tax and Accounting News Card (Right)
+saf-card.news-card {
+  .heading-with-icon {
+    display: flex;
+    align-items: center;
+    gap: var(--saf-spacing-3);
+
+    .icon-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      background: var(--saf-color-background-subtle);
+      border-radius: var(--saf-border-radius-sm);
+
+      saf-icon {
+        color: var(--saf-color-text-accent);
+      }
+    }
+  }
+
+  .news-stories {
+    display: flex;
+    flex-direction: column;
+    gap: var(--saf-spacing-4); // 16px gap between stories
+
+    .news-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0; // No gap between link and metadata
+
+      .news-link {
+        display: inline-flex;
+        align-items: flex-start;
+        line-height: 1.5;
+        margin-bottom: 0;
+
+        saf-icon {
+          color: var(--saf-color-text-light);
+          margin-top: 2px;
+        }
+      }
+
+      .article-metadata {
+        saf-metadata-item {
+          font-size: var(--saf-font-size-sm);
+          color: var(--saf-color-text-subtle);
+          font-family: var(--saf-font-family-source-sans-3);
+          font-weight: var(--saf-font-weight-regular);
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+
+  .read-more {
+    margin-top: var(--saf-spacing-4);
+
+    .read-more-link {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--saf-spacing-1);
+      font-family: var(--saf-font-family-source-sans-3);
+      font-size: var(--saf-font-size-md);
+      font-weight: var(--saf-font-weight-regular);
+      color: var(--saf-color-text-link);
+      text-decoration: none;
+
+      saf-icon {
+        color: var(--saf-color-text-light);
+      }
+    }
+  }
+}
+
+// News Card (Right)
+saf-card.news-card {
+  // Orange color for newspaper icon
+  saf-icon[slot="icon"] {
+    color: var(--color-interactive-hero-default, #d64000);
+  }
+
+  .news-stories {
+    .news-item {
+      .news-link {
+        saf-icon {
+          padding-left: var(
+            --saf-spacing-1
+          ); // 4px spacing between anchor text and icon
+        }
+      }
+    }
+  }
+
+  .read-more {
+    .read-more-link {
+      saf-icon {
+        padding-left: var(
+          --saf-spacing-1
+        ); // 4px spacing between anchor text and icon
+      }
+    }
+  }
+}

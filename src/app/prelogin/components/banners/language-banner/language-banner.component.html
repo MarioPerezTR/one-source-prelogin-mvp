@@ -1,0 +1,30 @@
+<div class="language-banner" data-node-id="16946:50528">
+  <div class="language-content" data-node-id="16946:50529">
+    <div class="language-selector" data-node-id="16948:8190">
+      <label for="language-select" class="language-label">
+        <span class="label-text">Language</span>
+      </label>
+      <saf-combobox
+        id="language-select"
+        label=""
+        placeholder="Select language"
+        [value]="selectedLanguage.name"
+        (change)="onLanguageChange($event)"
+        (open)="onDropdownOpen()"
+        aria-labelledby="language-label"
+        a11y-aria-description="Select your preferred language"
+        search-offline="false"
+        autocomplete="off"
+        class="language-combobox"
+      >
+        <saf-option
+          *ngFor="let language of languages; trackBy: trackByLanguageCode"
+          [value]="language.name"
+          (click)="onOptionClick(language)"
+        >
+          {{ language.name }}
+        </saf-option>
+      </saf-combobox>
+    </div>
+  </div>
+</div>

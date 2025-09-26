@@ -1,0 +1,120 @@
+<section class="carousel" aria-labelledby="carousel-heading">
+  <h3 id="carousel-heading" class="visually-hidden">Featured Content</h3>
+
+  <div class="carousel-viewport">
+    <ul class="carousel-slides">
+      <li class="slide" [class.active]="current === 0">
+        <saf-card
+          density="standard"
+          appearance="vertical"
+          class="carousel-card"
+          heading-level="4"
+        >
+          <img
+            slot="media"
+            src="https://www.thomsonreuters.com.au/content/dam/ewp-m/images/asia-region/en/artworked-images/synergy24-pic.jpg.transform/q90/image.jpg"
+            alt="SYNERGY 2025 Conference"
+            loading="lazy"
+          />
+
+          <div slot="eyebrow">{{ "carousel.synergy.eyebrow" | translate }}</div>
+          <div slot="heading">{{ "carousel.synergy.title" | translate }}</div>
+
+          <p class="card-description">
+            {{ "carousel.synergy.description" | translate }}
+          </p>
+
+          <div slot="controls">
+            <saf-anchor href="#" class="explore-link">
+              {{ "carousel.synergy.link" | translate }}
+              <saf-icon
+                slot="end"
+                icon-name="arrow-up-right-from-square"
+              ></saf-icon>
+            </saf-anchor>
+          </div>
+        </saf-card>
+      </li>
+
+      <li class="slide" [class.active]="current === 1">
+        <saf-card
+          density="standard"
+          appearance="vertical"
+          class="carousel-card"
+          heading-level="4"
+        >
+          <img
+            slot="media"
+            src="https://insight.thomsonreuters.com/sea/legal/wp-content/uploads/sites/9/2025/06/251216_922168087-scaled-e1750978600736.jpeg"
+            alt="Future of Professionals Report 2025"
+            loading="lazy"
+          />
+
+          <div slot="heading">{{ "carousel.future.title" | translate }}</div>
+
+          <p class="card-description">
+            {{ "carousel.future.description" | translate }}
+          </p>
+
+          <div slot="controls">
+            <saf-anchor href="#" class="explore-link">
+              {{ "carousel.future.link" | translate }}
+              <saf-icon
+                slot="end"
+                icon-name="arrow-up-right-from-square"
+              ></saf-icon>
+            </saf-anchor>
+          </div>
+        </saf-card>
+      </li>
+    </ul>
+  </div>
+
+  <div
+    class="live-region visually-hidden"
+    aria-live="polite"
+    aria-atomic="true"
+  >
+    Item {{ current + 1 }} of 2
+  </div>
+
+  <div class="carousel-controls">
+    <saf-button
+      appearance="secondary"
+      icon-only
+      density="standard"
+      class="btn-prev"
+      title="Previous slide"
+      a11y-aria-description="Navigate to the previous content slide"
+      [disabled]="isPrevDisabled"
+      (click)="prev()"
+    >
+      <saf-icon
+        icon-name="chevron-left"
+        presentation="false"
+        aria-label="Previous"
+      ></saf-icon>
+    </saf-button>
+
+    <div class="slide-indicator">
+      <span class="slide-text">Slide {{ current + 1 }} of 2</span>
+    </div>
+
+    <saf-button
+      appearance="secondary"
+      icon-only
+      density="standard"
+      class="btn-next"
+      title="Next slide"
+      a11y-aria-description="Navigate to the next content slide"
+      [disabled]="isNextDisabled"
+      (click)="next()"
+    >
+      <saf-icon
+        icon-name="chevron-right"
+        presentation="false"
+        aria-label="Next"
+      ></saf-icon>
+    </saf-button>
+  </div>
+</section>

@@ -1,0 +1,141 @@
+:host {
+  display: block;
+  width: 100%;
+  max-width: 680px;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--saf-spacing-2);
+  width: 100%;
+  position: relative;
+}
+
+.carousel-viewport {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  min-height: 540px; // Ensure viewport accommodates full card height
+}
+
+.carousel-slides {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.slide {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+  }
+}
+
+.carousel-card {
+  width: 100%;
+  height: 100%;
+  min-height: 540px; // Match login card height based on Figma
+  display: flex;
+  flex-direction: column;
+
+  img {
+    width: 100%;
+    height: 280px; // Increased image height to match proportions
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  // Description styling for content not in slots
+  .card-description {
+    font-family: var(--saf-font-family-source-sans-3);
+    font-weight: var(--saf-font-weight-regular);
+    font-size: var(--saf-font-size-md);
+    line-height: 1.5;
+    color: var(--saf-color-text-heavy);
+    margin: 0;
+    flex: 1; // Take available space
+    display: -webkit-box;
+    -webkit-line-clamp: 4; // Allow more lines
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  // Styling for explore links in controls slot
+  .explore-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--saf-spacing-1);
+    font-family: var(--saf-font-family-source-sans-3);
+    font-weight: var(--saf-font-weight-medium);
+    font-size: var(--saf-font-size-md);
+    color: var(--saf-color-anchor-default);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      color: var(--saf-color-anchor-hover);
+    }
+
+    &:focus {
+      outline: 2px solid var(--saf-color-focus-ring);
+      outline-offset: 2px;
+      border-radius: var(--saf-border-radius-sm);
+    }
+
+    saf-icon[slot="end"] {
+      color: var(--saf-color-anchor-default);
+      font-size: var(--saf-font-size-md);
+    }
+  }
+  overflow: hidden;
+}
+
+.explore-link {
+  font-family: var(--saf-font-family-source-sans-3);
+  font-weight: var(--saf-font-weight-regular);
+  font-size: var(--saf-font-size-md);
+  line-height: 1.5;
+  color: var(--saf-color-anchor-default);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: var(--saf-spacing-1);
+  align-self: flex-start;
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--saf-spacing-2);
+
+  .slide-indicator {
+    padding: var(--saf-spacing-2);
+
+    .slide-text {
+      font: var(--saf-type-body-default-md-regular-standard);
+    }
+  }
+}

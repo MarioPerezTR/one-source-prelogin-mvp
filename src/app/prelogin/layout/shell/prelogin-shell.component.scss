@@ -1,0 +1,185 @@
+:host {
+  display: block;
+  background: var(--saf-color-background-default);
+  min-height: 100vh;
+}
+
+.prelogin-shell {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background: var(--saf-color-background-default);
+
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .welcome-section {
+    padding: var(--saf-spacing-11) 0;
+    background: var(--saf-color-data-viz-gold-100);
+
+    .welcome-container {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0;
+
+      .welcome-title {
+        text-align: left;
+        margin: 0 0 var(--saf-spacing-6) 0;
+        font-family: var(--saf-font-family-clario);
+        font-weight: var(--saf-font-weight-medium);
+        font-size: var(--saf-font-size-4xl);
+        line-height: 1.2;
+        color: var(--saf-color-text-heavy);
+      }
+
+      .welcome-layout {
+        display: grid;
+        grid-template-columns: 680px 680px;
+        gap: var(--saf-spacing-6);
+        align-items: start;
+        padding: 0 var(--saf-spacing-7);
+        justify-content: center;
+
+        .login-card-container {
+          display: flex;
+          justify-content: flex-end;
+        }
+
+        .carousel-container {
+          display: flex;
+          justify-content: flex-start;
+        }
+      }
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 992px) {
+  .prelogin-shell {
+    .welcome-section {
+      .welcome-container {
+        .welcome-layout {
+          grid-template-columns: 1fr;
+          gap: var(--saf-spacing-xl);
+
+          .login-card-container {
+            order: 1;
+          }
+
+          .carousel-container {
+            order: 2;
+          }
+        }
+      }
+    }
+  }
+}
+
+.content-section {
+  padding: var(--saf-spacing-9) 0;
+  background: var(--saf-color-background-default);
+
+  .content-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 var(--saf-spacing-7);
+
+    .content-layout {
+      display: grid;
+      grid-template-columns: 680px 680px;
+      gap: var(--saf-spacing-6);
+      align-items: start;
+      justify-content: center;
+    }
+  }
+}
+
+// Responsive design with progressive adaptation
+@media (max-width: 1200px) {
+  .content-section {
+    .content-container {
+      padding: 0 var(--saf-spacing-5);
+
+      .content-layout {
+        gap: var(--saf-spacing-5);
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .prelogin-shell {
+    .welcome-section {
+      .welcome-container {
+        .welcome-layout {
+          grid-template-columns: 1fr;
+          gap: var(--saf-spacing-xl);
+
+          .login-card-container {
+            order: 1;
+          }
+
+          .carousel-container {
+            order: 2;
+          }
+        }
+      }
+    }
+  }
+
+  .content-section {
+    .content-container {
+      .content-layout {
+        grid-template-columns: 1fr;
+        gap: var(--saf-spacing-xl);
+      }
+    }
+  }
+}
+
+// Extended carousel section
+.extended-carousel-section {
+  width: 100%;
+  background: var(--saf-color-data-viz-gold-100);
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .prelogin-shell {
+    .welcome-section {
+      padding: var(--saf-spacing-xl) 0;
+
+      .welcome-container {
+        padding: 0 var(--saf-spacing-m);
+
+        .welcome-title {
+          font-size: var(--saf-typography-heading-l-font-size);
+          margin-bottom: var(--saf-spacing-xl);
+        }
+
+        .welcome-layout {
+          gap: var(--saf-spacing-l);
+        }
+      }
+    }
+
+    .content-section {
+      .content-container {
+        padding: 0 var(--saf-spacing-m);
+
+        .content-layout {
+          grid-template-columns: 1fr;
+          gap: var(--saf-spacing-l);
+        }
+      }
+    }
+  }
+
+  // Extended carousel section: No additional mobile-specific styles needed, handled by component
+}

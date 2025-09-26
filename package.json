@@ -1,0 +1,46 @@
+{
+  "name": "one-source-prelogin",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "axe-linter": "axe-linter-connector -s ./src -d .axe-reports --local --license-key=eyJjb21wYW55TmFtZSI6IlRob21zb24gUmV1dGVycyIsImV4cGlyZXMiOiIyMDI1LTExLTI4VDE4OjMwOjAwLjAwMFoifQ==.37CsNzP8bnyNMdaL5OIBE3p0SeqshjEFefLoCYak2Wm6VbV8dAjPEcT3yO0RkbKsuh6+ZQz+gseb5qUFEwxSmw== --url=https://axe-linter.deque.com",
+    "axe-check": "npm run axe-linter && node .husky/check-report.js .axe-reports/axe-linter-report.json",
+    "axe-file": "axe-linter-connector -d . --local --license-key=eyJjb21wYW55TmFtZSI6IlRob21zb24gUmV1dGVycyIsImV4cGlyZXMiOiIyMDI1LTExLTI4VDE4OjMwOjAwLjAwMFoifQ==.37CsNzP8bnyNMdaL5OIBE3p0SeqshjEFefLoCYak2Wm6VbV8dAjPEcT3yO0RkbKsuh6+ZQz+gseb5qUFEwxSmw== --url=https://axe-linter.deque.com -s",
+    "prepare": "husky"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/common": "^19.2.0",
+    "@angular/compiler": "^19.2.0",
+    "@angular/core": "^19.2.0",
+    "@angular/forms": "^19.2.0",
+    "@angular/platform-browser": "^19.2.0",
+    "@angular/platform-browser-dynamic": "^19.2.0",
+    "@angular/router": "^19.2.0",
+    "@saffron/core-components": "^3.9.0",
+    "@saffron/core-styles": "^3.6.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.15.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^19.2.15",
+    "@angular/cli": "^19.2.15",
+    "@angular/compiler-cli": "^19.2.0",
+    "@axe-devtools/axe-linter-connector": "^4.10.9",
+    "@playwright/test": "^1.55.0",
+    "@types/jasmine": "~5.1.0",
+    "husky": "^9.1.7",
+    "jasmine-core": "~5.6.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "typescript": "~5.7.2"
+  }
+}

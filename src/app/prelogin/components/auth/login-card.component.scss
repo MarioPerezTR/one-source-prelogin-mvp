@@ -1,0 +1,172 @@
+:host {
+  display: block;
+  width: 100%;
+  max-width: 680px;
+}
+
+.login-card {
+  border-radius: var(--saf-border-radius-sm);
+  box-shadow: 0px 2px 8px 2px rgba(31, 31, 31, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body {
+  flex: 1;
+  padding: var(--saf-spacing-2) var(--saf-spacing-2) 0 var(--saf-spacing-2);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--saf-spacing-6);
+  margin-bottom: var(--saf-spacing-6);
+
+  .tr-logo {
+    height: 30px;
+    width: 211.185px;
+    object-fit: contain;
+  }
+
+  .header-content {
+    display: flex;
+    flex-direction: column;
+
+    .text-container {
+      display: flex;
+      flex-direction: column;
+      line-height: 0;
+      color: var(--saf-color-text-heavy);
+      width: 100%;
+
+      .card-title {
+        font: var(--saf-type-heading-default-2xl-strong-standard);
+        line-height: 1.2;
+        margin: 0;
+      }
+
+      .required-field-note {
+        font: var(--saf-type-body-default-md-regular-standard);
+        color: var(--saf-color-text-heavy);
+        margin: 0;
+      }
+    }
+  }
+}
+
+.login-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  .input-container {
+    margin-bottom: var(--saf-spacing-4);
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    saf-text-field {
+      width: 100%;
+    }
+  }
+
+  .forgot-password-container {
+    margin-top: var(--saf-spacing-4);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: var(--saf-spacing-2);
+
+    .icon-button {
+      width: var(--saf-spacing-4);
+      height: var(--saf-spacing-4);
+      border-radius: 50%;
+      border: none;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+
+      &:hover {
+        background: var(--saf-color-interactive-tertiary-hover);
+        border: var(--saf-line-width-thick) solid
+          var(--saf-color-interactive-border-primary-hover);
+      }
+
+      &:focus {
+        box-shadow: var(--saf-drop-shadow-focus);
+      }
+
+      saf-icon {
+        color: var(--saf-color-text-subtle);
+        font-size: var(--saf-font-size-md);
+      }
+    }
+
+    saf-anchor {
+      font-family: var(--saf-font-family-source-sans-3);
+      font-size: var(--saf-font-size-md);
+      color: var(--saf-color-anchor-default);
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.card-footer {
+  border-top: none;
+  padding: 13px var(--saf-spacing-2) var(--saf-spacing-2) var(--saf-spacing-2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0 var(--saf-border-radius-sm) var(--saf-border-radius-sm);
+  background: var(--saf-color-background-default);
+
+  .buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .sign-in-button {
+    width: 100%;
+  }
+
+  ::ng-deep .sign-in-button::part(control) {
+    background-color: var(--saf-color-orange-500);
+    width: 100%;
+    border-color: var(--saf-color-orange-500);
+
+    &:focus {
+      outline: 2px solid var(--saf-color-blue-focus);
+      outline-offset: 2px;
+    }
+
+    &:active {
+      background-color: var(--saf-color-orange-600);
+      color: var(--saf-color-white);
+      border-color: var(--saf-color-orange-600);
+    }
+
+    &:hover {
+      outline: 2px solid var(--saf-color-orange-500);
+      outline-offset: -2px;
+      color: var(--saf-color-text-heavy);
+      background-color: var(--saf-color-orange-100);
+    }
+  }
+
+  ::ng-deep .sign-in-button::part(content) {
+    margin: auto;
+    justify-content: center;
+  }
+}

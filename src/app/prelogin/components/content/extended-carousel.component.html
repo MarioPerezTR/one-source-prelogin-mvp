@@ -1,0 +1,174 @@
+<!-- Extended carousel component -->
+<div class="extended-carousel">
+  <div class="carousel-container">
+    <div
+      class="slides-wrapper"
+      [style.transform]="'translateX(-' + currentSlide * 33.33 + '%)'"
+    >
+      <!-- Slide 1: Find product courses -->
+      <div class="slide slide-1">
+        <div class="slide-content">
+          <div class="text-content">
+            <saf-text appearance="heading-4xl" role="heading" aria-level="2">
+              {{ "extendedCarousel.slide1.title" | translate }}
+            </saf-text>
+            <saf-divider
+              orientation="horizontal"
+              role="separator"
+            ></saf-divider>
+            <div class="description-container">
+              <saf-text appearance="body-lg">
+                {{ "extendedCarousel.slide1.description" | translate }}
+              </saf-text>
+              <div class="button-area">
+                <saf-anchor
+                  href="https://onesourceuniversity.thomsonreuters.com/learn/signin"
+                  target="_blank"
+                  appearance="cta-primary"
+                >
+                  {{ "extendedCarousel.slide1.buttonText" | translate }}
+                  <saf-icon
+                    slot="end"
+                    icon-name="arrow-up-right-from-square"
+                    appearance="solid"
+                  ></saf-icon>
+                </saf-anchor>
+              </div>
+            </div>
+          </div>
+          <div class="image-content">
+            <img
+              src="https://www.thomsonreuters.com/en-us/posts/wp-content/uploads/sites/20/2024/08/AdobeStock_493962728_A_resize.jpg"
+              alt="{{ 'extendedCarousel.slide1.imageAlt' | translate }}"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2: Browse expert-led webinars -->
+      <div class="slide slide-2">
+        <div class="slide-content">
+          <div class="text-content">
+            <h2>{{ "extendedCarousel.slide2.title" | translate }}</h2>
+            <saf-divider
+              orientation="horizontal"
+              role="separator"
+            ></saf-divider>
+            <div class="description-container">
+              <p class="description">
+                {{ "extendedCarousel.slide2.description" | translate }}
+              </p>
+              <div class="button-area">
+                <saf-anchor
+                  href="https://tax.thomsonreuters.com/en/insights/webinars#t=webinars&sort=%40tr_wpublishedtime%20descending&numberOfResults=12&f:@tr_worganizationtype=[Corporation]"
+                  target="_blank"
+                  appearance="primary"
+                  class="cta-button"
+                >
+                  {{ "extendedCarousel.slide2.buttonText" | translate }}
+                  <saf-icon
+                    slot="end"
+                    icon-name="arrow-up-right-from-square"
+                    appearance="solid"
+                  ></saf-icon>
+                </saf-anchor>
+              </div>
+            </div>
+          </div>
+          <div class="image-content">
+            <img
+              src="https://f001.backblazeb2.com/file/BIT-Magazine-Images/1750326251-shutterstock_2480862361.jpg"
+              alt="{{ 'extendedCarousel.slide2.imageAlt' | translate }}"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: Drive accurate results with ONESOURCE -->
+      <div class="slide slide-3">
+        <div class="slide-content">
+          <div class="text-content">
+            <h2>{{ "extendedCarousel.slide3.title" | translate }}</h2>
+            <saf-divider
+              orientation="horizontal"
+              role="separator"
+            ></saf-divider>
+            <div class="description-container">
+              <p class="description">
+                {{ "extendedCarousel.slide3.description" | translate }}
+              </p>
+              <div class="button-area">
+                <saf-anchor
+                  href="https://tax.thomsonreuters.com/en/onesource"
+                  target="_blank"
+                  appearance="primary"
+                  class="cta-button"
+                >
+                  {{ "extendedCarousel.slide3.buttonText" | translate }}
+                  <saf-icon
+                    slot="end"
+                    icon-name="arrow-up-right-from-square"
+                    appearance="solid"
+                  ></saf-icon>
+                </saf-anchor>
+              </div>
+            </div>
+          </div>
+          <div class="cards-content">
+            <div class="product-cards-list">
+              <div class="product-card" *ngFor="let product of products">
+                <saf-icon
+                  [icon-name]="product.icon"
+                  appearance="solid"
+                  class="product-icon"
+                >
+                </saf-icon>
+                <saf-anchor
+                  [href]="product.url"
+                  target="_blank"
+                  class="product-link"
+                >
+                  {{ product.name | translate }}
+                  <saf-icon
+                    slot="end"
+                    icon-name="arrow-up-right-from-square"
+                    appearance="solid"
+                  ></saf-icon>
+                </saf-anchor>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Carousel controls -->
+  <div class="carousel-controls">
+    <saf-button
+      icon-only
+      appearance="secondary"
+      aria-label="{{ 'carousel.previousSlide' | translate }}"
+      (click)="previousSlide()"
+      [disabled]="currentSlide === 0"
+    >
+      <saf-icon icon-name="chevron-left" appearance="solid"></saf-icon>
+    </saf-button>
+
+    <div class="slide-indicator">
+      <span>Slide {{ currentSlide + 1 }} of {{ totalSlides }}</span>
+    </div>
+
+    <saf-button
+      icon-only
+      appearance="secondary"
+      aria-label="{{ 'carousel.nextSlide' | translate }}"
+      (click)="nextSlide()"
+      [disabled]="currentSlide === totalSlides - 1"
+    >
+      <saf-icon icon-name="chevron-right" appearance="solid"></saf-icon>
+    </saf-button>
+  </div>
+</div>

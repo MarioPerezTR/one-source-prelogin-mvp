@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
+body {
+  font-family: var(--saf-font-family-source-sans-3), -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--saf-color-background-default);
+}
+
+.font-clario {
+  font-family: var(--saf-font-family-clario);
+}
+
+.font-knowledge {
+  font-family: "Knowledge2017", var(--saf-font-family-source-sans-3), sans-serif;
+}
+
+.font-source-sans {
+  font-family: var(--saf-font-family-source-sans-3);
+}
+
+// Global fix for Saffron combobox dropdown positioning and z-index
+saf-combobox {
+  .saf-combobox__dropdown,
+  .saf-popover,
+  [role="listbox"] {
+    right: 0 !important;
+    left: auto !important;
+    transform: translateX(0) !important;
+    z-index: 10000 !important;
+    position: fixed !important;
+  }
+
+  // Target the shadow DOM parts directly
+  &::part(listbox) {
+    z-index: 10000 !important;
+    position: fixed !important;
+  }
+}
+
+// More aggressive global z-index fix for any dropdown/listbox
+[role="listbox"],
+.listbox,
+[part="listbox"] {
+  z-index: 10000 !important;
+  position: fixed !important;
+}
+
+// Target Saffron components specifically
+saf-combobox [part="listbox"],
+saf-combobox .listbox {
+  z-index: 10000 !important;
+  position: fixed !important;
+}

@@ -1,0 +1,338 @@
+{
+  "en-US": {
+    "common": {
+      "language": "Language"
+    },
+    "breaking": {
+      "news": "One system under Maintenance. All other systems are operational. See",
+      "link": "systems status"
+    },
+    "login": {
+      "title": "Sign in to ONESOURCE",
+      "subtitle": "* Indicates a required field",
+      "email": "Email",
+      "password": "Password",
+      "forgot": "Forgot email or password?",
+      "button": "Sign In"
+    },
+    "carousel": {
+      "synergy": {
+        "eyebrow": "November 9-12, 2025 | Orlando, Florida",
+        "title": "SYNERGY 2025",
+        "description": "The future of work is coming to Orlando this November for corporate professionals. Discover innovative solutions, exchange ideas with industry peers, and forge new partnerships. From AI-driven solutions to cutting-edge advancements in digital transformation, find out what's next from Thomson Reuters at SYNERGY 2025.",
+        "link": "Explore our session topics"
+      },
+      "future": {
+        "title": "Future of Professionals Report 2025",
+        "description": "The Thomson Reuters Future of Professionals Report 2025 reveals how AI continues to shape professional work — and what it takes to get ahead. This year's report shows that increased efficiency, productivity, and cost savings top the list of benefits professionals attribute to AI, making it indispensable for organizations facing rapid change.",
+        "link": "Read the report"
+      },
+      "slideIndicator": "Slide {{current}} of {{total}}",
+      "previousSlide": "Previous slide",
+      "nextSlide": "Next slide"
+    },
+    "footer": {
+      "copyright": "© 2025 Thomson Reuters. All rights reserved."
+    },
+    "quickLinks": {
+      "title": "Quick Links",
+      "links": {
+        "getHelp": "Get help and support",
+        "contactOnesource": "Contact ONESOURCE",
+        "signInCase": "Sign in to case management dashboard",
+        "checkStatus": "Check system status"
+      }
+    },
+    "news": {
+      "title": "Tax and accounting news",
+      "articles": {
+        "payrollCompliance": "Payroll org compliance chief reacts to IRS Draft 2026 Forms under OBBBA",
+        "key2026Figures": "Key 2026 figures calculated by Thomson Reuters Checkpoint based on inflation data now available",
+        "senatorsGrill": "Senators grill IRS chief counsel nominee"
+      },
+      "metadata": {
+        "readTime": "min read",
+        "published": "Published"
+      },
+      "readMore": "Read more news"
+    },
+    "extendedCarousel": {
+      "slide1": {
+        "title": "Find product courses, workshops, and more",
+        "description": "ONESOURCE University is an easy-to-use, one-stop shop for all your training needs. Register to get immediate access to our catalog.",
+        "buttonText": "Sign in to ONESOURCE University",
+        "imageAlt": "People working with technology in office"
+      },
+      "slide2": {
+        "title": "Browse expert-led webinars",
+        "description": "Gain insights and practical guidance from seasoned professionals in tax and global trade.",
+        "buttonText": "Browse webinars",
+        "imageAlt": "Professional presenting at conference"
+      },
+      "slide3": {
+        "title": "Drive accurate and audit-proof results with ONESOURCE",
+        "description": "Explore how ONESOURCE tax software solutions work together across corporate tax and trade lifecycles.",
+        "buttonText": "Learn about ONESOURCE",
+        "products": {
+          "indirectTax": "Indirect Tax",
+          "directTax": "Direct Tax",
+          "globalTrade": "Global trade management",
+          "statutory": "Statutory reporting",
+          "informationReporting": "Information reporting and ACA compliance"
+        }
+      }
+    }
+  },
+  "es-ES": {
+    "common": {
+      "language": "Idioma"
+    },
+    "breaking": {
+      "news": "Un sistema en mantenimiento. Todos los demás sistemas están operativos. Ver",
+      "link": "estado de sistemas"
+    },
+    "login": {
+      "title": "Iniciar sesión en ONESOURCE",
+      "subtitle": "* Indica un campo obligatorio",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "forgot": "¿Olvidaste el correo o la contraseña?",
+      "button": "Iniciar Sesión"
+    },
+    "carousel": {
+      "synergy": {
+        "eyebrow": "9-12 de Noviembre, 2025 | Orlando, Florida",
+        "title": "SYNERGY 2025",
+        "description": "El futuro del trabajo llega a Orlando este noviembre para profesionales corporativos. Descubre soluciones innovadoras, intercambia ideas con colegas de la industria y forja nuevas alianzas. Desde soluciones impulsadas por IA hasta avances de vanguardia en transformación digital, descubre lo que sigue de Thomson Reuters en SYNERGY 2025.",
+        "link": "Explorar nuestros temas de sesión"
+      },
+      "future": {
+        "title": "Informe del Futuro de los Profesionales 2025",
+        "description": "El Informe del Futuro de los Profesionales 2025 de Thomson Reuters revela cómo la IA continúa dando forma al trabajo profesional y lo que se necesita para avanzar. El informe de este año muestra que el aumento de la eficiencia, productividad y ahorro de costos encabezan la lista de beneficios que los profesionales atribuyen a la IA, haciéndola indispensable para organizaciones que enfrentan cambios rápidos.",
+        "link": "Leer el informe"
+      },
+      "slideIndicator": "Diapositiva {{current}} de {{total}}",
+      "previousSlide": "Diapositiva anterior",
+      "nextSlide": "Siguiente diapositiva"
+    },
+    "footer": {
+      "copyright": "© 2025 Thomson Reuters. Todos los derechos reservados."
+    },
+    "quickLinks": {
+      "title": "Enlaces Rápidos",
+      "links": {
+        "getHelp": "Obtener ayuda y soporte",
+        "contactOnesource": "Contactar ONESOURCE",
+        "signInCase": "Iniciar sesión en el panel de gestión de casos",
+        "checkStatus": "Verificar estado del sistema"
+      }
+    },
+    "news": {
+      "title": "Noticias fiscales y contables",
+      "articles": {
+        "payrollCompliance": "Jefe de cumplimiento de nómina reacciona a los Formularios Borrador 2026 del IRS bajo OBBBA",
+        "key2026Figures": "Cifras clave de 2026 calculadas por Thomson Reuters Checkpoint basadas en datos de inflación ahora disponibles",
+        "senatorsGrill": "Senadores interrogan al nominado a consejero jefe del IRS"
+      },
+      "metadata": {
+        "readTime": "min de lectura",
+        "published": "Publicado"
+      },
+      "readMore": "Leer más noticias"
+    },
+    "extendedCarousel": {
+      "slide1": {
+        "title": "Encuentra cursos de productos, talleres y más",
+        "description": "ONESOURCE University es una tienda fácil de usar y de ventanilla única para todas tus necesidades de capacitación. Regístrate para obtener acceso inmediato a nuestro catálogo.",
+        "buttonText": "Iniciar sesión en ONESOURCE University",
+        "imageAlt": "Personas trabajando con tecnología en oficina"
+      },
+      "slide2": {
+        "title": "Explora seminarios web dirigidos por expertos",
+        "description": "Obtén conocimientos y orientación práctica de profesionales experimentados en impuestos y comercio global.",
+        "buttonText": "Explorar seminarios web",
+        "imageAlt": "Profesional presentando en conferencia"
+      },
+      "slide3": {
+        "title": "Obtén resultados precisos y a prueba de auditorías con ONESOURCE",
+        "description": "Explora cómo las soluciones de software fiscal ONESOURCE funcionan juntas a través de los ciclos de vida fiscales y comerciales corporativos.",
+        "buttonText": "Aprende sobre ONESOURCE",
+        "products": {
+          "indirectTax": "Impuestos Indirectos",
+          "directTax": "Impuestos Directos",
+          "globalTrade": "Gestión de comercio global",
+          "statutory": "Informes estatutarios",
+          "informationReporting": "Informes de información y cumplimiento ACA"
+        }
+      }
+    }
+  },
+  "fr-FR": {
+    "common": {
+      "language": "Langue"
+    },
+    "breaking": {
+      "news": "Un système en maintenance. Tous les autres systèmes sont opérationnels. Voir",
+      "link": "état des systèmes"
+    },
+    "login": {
+      "title": "Se connecter à ONESOURCE",
+      "subtitle": "* Indique un champ obligatoire",
+      "email": "Email",
+      "password": "Mot de passe",
+      "forgot": "Email ou mot de passe oublié?",
+      "button": "Se Connecter"
+    },
+    "carousel": {
+      "synergy": {
+        "eyebrow": "9-12 novembre 2025 | Orlando, Floride",
+        "title": "SYNERGY 2025",
+        "description": "L'avenir du travail arrive à Orlando ce novembre pour les professionnels d'entreprise. Découvrez des solutions innovantes, échangez des idées avec des pairs de l'industrie et forgez de nouveaux partenariats. Des solutions pilotées par l'IA aux avancées de pointe en transformation numérique, découvrez ce qui suit de Thomson Reuters à SYNERGY 2025.",
+        "link": "Explorer nos sujets de session"
+      },
+      "future": {
+        "title": "Rapport sur l'Avenir des Professionnels 2025",
+        "description": "Le Rapport sur l'Avenir des Professionnels 2025 de Thomson Reuters révèle comment l'IA continue de façonner le travail professionnel et ce qu'il faut pour réussir. Le rapport de cette année montre que l'augmentation de l'efficacité, de la productivité et des économies de coûts arrive en tête de la liste des avantages que les professionnels attribuent à l'IA.",
+        "link": "Lire le rapport"
+      },
+      "slideIndicator": "Diapositive {{current}} sur {{total}}",
+      "previousSlide": "Diapositive précédente",
+      "nextSlide": "Diapositive suivante"
+    },
+    "footer": {
+      "copyright": "© 2025 Thomson Reuters. Tous droits réservés."
+    },
+    "quickLinks": {
+      "title": "Liens Rapides",
+      "links": {
+        "getHelp": "Obtenir de l'aide et du support",
+        "contactOnesource": "Contacter ONESOURCE",
+        "signInCase": "Se connecter au tableau de bord de gestion des cas",
+        "checkStatus": "Vérifier l'état du système"
+      }
+    },
+    "news": {
+      "title": "Actualités fiscales et comptables",
+      "articles": {
+        "payrollCompliance": "Le responsable de la conformité paie réagit aux formulaires IRS Draft 2026 sous OBBBA",
+        "key2026Figures": "Chiffres clés 2026 calculés par Thomson Reuters Checkpoint basés sur des données d'inflation maintenant disponibles",
+        "senatorsGrill": "Les sénateurs cuisinent le candidat au poste de conseiller en chef de l'IRS"
+      },
+      "metadata": {
+        "readTime": "min de lecture",
+        "published": "Publié"
+      },
+      "readMore": "Lire plus d'actualités"
+    },
+    "extendedCarousel": {
+      "slide1": {
+        "title": "Trouvez des cours de produits, des ateliers et plus",
+        "description": "ONESOURCE University est un guichet unique facile à utiliser pour tous vos besoins de formation. Inscrivez-vous pour obtenir un accès immédiat à notre catalogue.",
+        "buttonText": "Se connecter à ONESOURCE University",
+        "imageAlt": "Personnes travaillant avec la technologie au bureau"
+      },
+      "slide2": {
+        "title": "Parcourez les webinaires dirigés par des experts",
+        "description": "Obtenez des informations et des conseils pratiques de professionnels expérimentés en fiscalité et commerce mondial.",
+        "buttonText": "Parcourir les webinaires",
+        "imageAlt": "Professionnel présentant en conférence"
+      },
+      "slide3": {
+        "title": "Obtenez des résultats précis et vérifiables avec ONESOURCE",
+        "description": "Explorez comment les solutions logicielles fiscales ONESOURCE fonctionnent ensemble à travers les cycles de vie fiscaux et commerciaux d'entreprise.",
+        "buttonText": "En savoir plus sur ONESOURCE",
+        "products": {
+          "indirectTax": "Taxe Indirecte",
+          "directTax": "Taxe Directe",
+          "globalTrade": "Gestion du commerce mondial",
+          "statutory": "Rapports statutaires",
+          "informationReporting": "Rapports d'information et conformité ACA"
+        }
+      }
+    }
+  },
+  "de-DE": {
+    "common": {
+      "language": "Sprache"
+    },
+    "breaking": {
+      "news": "Ein System in Wartung. Alle anderen Systeme sind betriebsbereit. Siehe",
+      "link": "Systemstatus"
+    },
+    "login": {
+      "title": "Bei ONESOURCE anmelden",
+      "subtitle": "* Kennzeichnet ein Pflichtfeld",
+      "email": "E-Mail",
+      "password": "Passwort",
+      "forgot": "E-Mail oder Passwort vergessen?",
+      "button": "Anmelden"
+    },
+    "carousel": {
+      "synergy": {
+        "eyebrow": "9.-12. November 2025 | Orlando, Florida",
+        "title": "SYNERGY 2025",
+        "description": "Die Zukunft der Arbeit kommt diesen November nach Orlando für Unternehmensfachleute. Entdecken Sie innovative Lösungen, tauschen Sie Ideen mit Branchenkollegen aus und knüpfen Sie neue Partnerschaften. Von KI-gesteuerten Lösungen bis hin zu bahnbrechenden Fortschritten in der digitalen Transformation.",
+        "link": "Unsere Session-Themen erkunden"
+      },
+      "future": {
+        "title": "Zukunft der Fachkräfte Bericht 2025",
+        "description": "Der Thomson Reuters Zukunft der Fachkräfte Bericht 2025 zeigt, wie KI die berufliche Arbeit weiterhin prägt und was es braucht, um voranzukommen. Der diesjährige Bericht zeigt, dass erhöhte Effizienz, Produktivität und Kosteneinsparungen die Liste der Vorteile anführen.",
+        "link": "Den Bericht lesen"
+      },
+      "slideIndicator": "Folie {{current}} von {{total}}",
+      "previousSlide": "Vorherige Folie",
+      "nextSlide": "Nächste Folie"
+    },
+    "footer": {
+      "copyright": "© 2025 Thomson Reuters. Alle Rechte vorbehalten."
+    },
+    "quickLinks": {
+      "title": "Schnelle Links",
+      "links": {
+        "getHelp": "Hilfe und Support erhalten",
+        "contactOnesource": "ONESOURCE kontaktieren",
+        "signInCase": "Bei Case-Management-Dashboard anmelden",
+        "checkStatus": "Systemstatus prüfen"
+      }
+    },
+    "news": {
+      "title": "Steuer- und Buchhaltungsnachrichten",
+      "articles": {
+        "payrollCompliance": "Lohnbuchhaltungs-Compliance-Chef reagiert auf IRS-Entwurf 2026-Formulare unter OBBBA",
+        "key2026Figures": "Wichtige 2026-Zahlen berechnet von Thomson Reuters Checkpoint basierend auf Inflationsdaten jetzt verfügbar",
+        "senatorsGrill": "Senatoren grillen IRS-Chefberater-Kandidaten"
+      },
+      "metadata": {
+        "readTime": "Min. Lesezeit",
+        "published": "Veröffentlicht"
+      },
+      "readMore": "Mehr Nachrichten lesen"
+    },
+    "extendedCarousel": {
+      "slide1": {
+        "title": "Finden Sie Produktkurse, Workshops und mehr",
+        "description": "ONESOURCE University ist ein benutzerfreundlicher One-Stop-Shop für alle Ihre Schulungsbedürfnisse. Registrieren Sie sich für sofortigen Zugang zu unserem Katalog.",
+        "buttonText": "Bei ONESOURCE University anmelden",
+        "imageAlt": "Personen arbeiten mit Technologie im Büro"
+      },
+      "slide2": {
+        "title": "Durchsuchen Sie expertengeführte Webinare",
+        "description": "Gewinnen Sie Einblicke und praktische Anleitungen von erfahrenen Fachleuten in Steuer- und Welthandel.",
+        "buttonText": "Webinare durchsuchen",
+        "imageAlt": "Fachmann präsentiert auf Konferenz"
+      },
+      "slide3": {
+        "title": "Erreichen Sie präzise und prüfungssichere Ergebnisse mit ONESOURCE",
+        "description": "Erkunden Sie, wie ONESOURCE Steuersoftware-Lösungen in Unternehmenssteuer- und Handelszyklen zusammenarbeiten.",
+        "buttonText": "Über ONESOURCE erfahren",
+        "products": {
+          "indirectTax": "Indirekte Steuern",
+          "directTax": "Direkte Steuern",
+          "globalTrade": "Globales Handelsmanagement",
+          "statutory": "Gesetzliche Berichterstattung",
+          "informationReporting": "Informationsberichterstattung und ACA-Compliance"
+        }
+      }
+    }
+  }
+}

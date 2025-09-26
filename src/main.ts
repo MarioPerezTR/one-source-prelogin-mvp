@@ -1,0 +1,200 @@
+import { bootstrapApplication } from '@angular/platform-browser';
+import { appConfig } from './app/app.config';
+import { AppComponent } from './app/app.component';
+
+// Saffron Design System
+import {
+  SafAccordion,
+  SafAccordionItem,
+  SafActionCard,
+  SafActionCardAction,
+  SafActivity,
+  SafActivityNote,
+  SafAlert,
+  SafAnchor,
+  SafAnchoredRegion,
+  SafAvatar,
+  SafBackToTop,
+  SafBadge,
+  SafBreadcrumb,
+  SafBreadcrumbItem,
+  SafButton,
+  SafButtonEmbedded,
+  SafButtonGroup,
+  SafCalendar,
+  SafCard,
+  SafCarousel,
+  SafChat,
+  SafCheckbox,
+  SafCheckboxGroup,
+  SafChip,
+  SafCombobox,
+  SafCommentField,
+  SafContainer,
+  SafDatePicker,
+  SafDescriptionDetails,
+  SafDescriptionList,
+  SafDescriptionTerm,
+  SafDialog,
+  SafDisclosure,
+  SafDivider,
+  SafDrawer,
+  SafEmptyState,
+  SafFacetCategory,
+  SafFacetedFilter,
+  SafFacetItem,
+  SafFileUpload,
+  SafFlipper,
+  SafFooter,
+  SafIcon,
+  SafLayoutGrid,
+  SafLayoutGridItem,
+  SafList,
+  SafListbox,
+  SafListItem,
+  SafLogo,
+  SafMenu,
+  SafMenuItem,
+  SafMessageBox,
+  SafMetadata,
+  SafMetadataItem,
+  SafNumberField,
+  SafOption,
+  SafPagination,
+  SafProductHeader,
+  SafProductHeaderItem,
+  SafProgress,
+  SafProgressRing,
+  SafProgressText,
+  SafRadio,
+  SafRadioGroup,
+  SafSearchField,
+  SafSelect,
+  SafSideNav,
+  SafSkipLink,
+  SafSkipLinkGroup,
+  SafSlider,
+  SafSliderLabel,
+  SafSplitter,
+  SafSrOnly,
+  SafStatus,
+  SafStep,
+  SafStepper,
+  SafSwitch,
+  SafTab,
+  SafTable,
+  SafTabPanel,
+  SafTabs,
+  SafText,
+  SafTextArea,
+  SafTextField,
+  SafToolbar,
+  SafTooltip,
+  SafTreeItem,
+  SafTreeView,
+  SafWindow,
+  SafWindowPanel,
+  SafWindows,
+  SafWizard,
+  SafWizardStepContent,
+  SafWorkspacePattern,
+} from '@saffron/core-components';
+
+SafAccordion();
+SafAccordionItem();
+SafActionCard();
+SafActionCardAction();
+SafActivity();
+SafActivityNote();
+SafAlert();
+SafAnchor();
+SafAnchoredRegion();
+SafAvatar();
+SafBackToTop();
+SafBadge();
+SafBreadcrumb();
+SafBreadcrumbItem();
+SafButton();
+SafButtonEmbedded();
+SafButtonGroup();
+SafCalendar();
+SafCard();
+SafCarousel();
+SafChat();
+SafCheckbox();
+SafCheckboxGroup();
+SafChip();
+SafCombobox();
+SafCommentField();
+SafContainer();
+SafDatePicker();
+SafDescriptionDetails();
+SafDescriptionList();
+SafDescriptionTerm();
+SafDialog();
+SafDisclosure();
+SafDivider();
+SafDrawer();
+SafEmptyState();
+SafFacetCategory();
+SafFacetedFilter();
+SafFacetItem();
+SafFileUpload();
+SafFlipper();
+SafFooter();
+SafIcon();
+SafLayoutGrid();
+SafLayoutGridItem();
+SafList();
+SafListbox();
+SafListItem();
+SafLogo();
+SafMenu();
+SafMenuItem();
+SafMessageBox();
+SafMetadata();
+SafMetadataItem();
+SafNumberField();
+SafOption();
+SafPagination();
+SafProductHeader();
+SafProductHeaderItem();
+SafProgress();
+SafProgressRing();
+SafProgressText();
+SafRadio();
+SafRadioGroup();
+SafSearchField();
+SafSelect();
+SafSideNav();
+SafSkipLink();
+SafSkipLinkGroup();
+SafSlider();
+SafSliderLabel();
+SafSplitter();
+SafSrOnly();
+SafStatus();
+SafStep();
+SafStepper();
+SafSwitch();
+SafTab();
+SafTable();
+SafTabPanel();
+SafTabs();
+SafText();
+SafTextArea();
+SafTextField();
+SafToolbar();
+SafTooltip();
+SafTreeItem();
+SafTreeView();
+SafWindow();
+SafWindowPanel();
+SafWindows();
+SafWizard();
+SafWizardStepContent();
+SafWorkspacePattern();
+
+bootstrapApplication(AppComponent, appConfig).catch((err) =>
+  console.error(err)
+);

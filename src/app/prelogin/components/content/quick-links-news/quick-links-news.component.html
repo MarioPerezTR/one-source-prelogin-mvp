@@ -1,0 +1,105 @@
+<!-- Quick Links Card (Left) -->
+<saf-card
+  class="quick-links-card"
+  density="compact"
+  appearance="vertical"
+  heading-level="2"
+  data-node-id="16821-25190"
+>
+  <div slot="heading">{{ "quickLinks.title" | translate }}</div>
+  <img
+    slot="media"
+    src="https://www.thomsonreuters.com/en-us/posts/wp-content/uploads/sites/20/2024/04/AdobeStock_327576516_resize.jpg"
+    alt="Professional man on phone"
+    loading="lazy"
+  />
+
+  <div class="card-content">
+    <nav class="links-list">
+      <saf-list size="medium" list-style="disc" order="unordered">
+        <saf-list-item *ngFor="let link of quickLinks">
+          <saf-anchor
+            [href]="link.url"
+            [target]="link.external ? '_blank' : '_self'"
+            [rel]="link.external ? 'noopener noreferrer' : ''"
+            class="quick-link"
+            >{{ link.key | translate
+            }}<saf-icon
+              *ngIf="link.external"
+              icon-name="external-link"
+              size="12"
+              aria-hidden="true"
+            ></saf-icon
+          ></saf-anchor>
+        </saf-list-item>
+      </saf-list>
+    </nav>
+  </div>
+</saf-card>
+
+<!-- Tax and Accounting News Card (Right) -->
+<saf-card
+  class="news-card"
+  density="compact"
+  appearance="vertical"
+  heading-level="2"
+>
+  <saf-icon
+    slot="icon"
+    size="70"
+    icon-name="newspaper"
+    aria-hidden="true"
+  ></saf-icon>
+  <div slot="heading">{{ "news.title" | translate }}</div>
+  <div class="card-content">
+    <div class="news-stories">
+      <ng-container *ngFor="let article of newsArticles; let i = index">
+        <div class="news-item">
+          <saf-anchor
+            [href]="article.url"
+            [target]="article.external ? '_blank' : '_self'"
+            [rel]="article.external ? 'noopener noreferrer' : ''"
+            class="news-link"
+          >
+            {{ article.titleKey | translate }}
+            <saf-icon
+              *ngIf="article.external"
+              icon-name="external-link"
+              size="12"
+              aria-hidden="true"
+            ></saf-icon>
+          </saf-anchor>
+          <saf-metadata class="article-metadata">
+            <saf-metadata-item>{{
+              ("news.metadata.published" | translate) + " " + article.date
+            }}</saf-metadata-item>
+            <saf-metadata-item>{{
+              article.readTime + " " + ("news.metadata.readTime" | translate)
+            }}</saf-metadata-item>
+          </saf-metadata>
+        </div>
+        <saf-divider
+          *ngIf="i < newsArticles.length - 1"
+          orientation="horizontal"
+          role="separator"
+          class="news-divider"
+        ></saf-divider>
+      </ng-container>
+    </div>
+    <div class="read-more">
+      <saf-anchor
+        href="#"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="read-more-link"
+      >
+        {{ "news.readMore" | translate }}
+        <saf-icon
+          icon-name="external-link"
+          size="12"
+          aria-hidden="true"
+        ></saf-icon>
+      </saf-anchor>
+    </div>
+  </div>
+</saf-card>
