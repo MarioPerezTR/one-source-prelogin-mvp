@@ -1,7 +1,7 @@
 // Using Saffron design tokens via CSS custom properties
 
 .extended-carousel {
-  background-color: var(--saf-color-data-viz-gold-100);
+  background: var(--saf-color-background-subtle);
   padding: var(--saf-spacing-11) var(--saf-spacing-7);
   width: 100%;
   min-height: 400px;
@@ -15,15 +15,31 @@
     margin: 0 auto 24px;
   }
 
+  // Override container styles when slide 3 is active
+  &.slide-3-active .carousel-container {
+    // Remove border-radius only when slide 3 is active
+    border-radius: 0;
+    // Keep overflow: hidden to prevent slide bleeding
+    overflow: hidden;
+  }
+
   .slides-wrapper {
     display: flex;
     width: 300%;
     transition: transform 0.5s ease-in-out;
+    // Ensure no gaps between slides
+    gap: 0;
+    margin: 0;
+    padding: 0;
   }
 
   .slide {
     width: calc(100% / 3);
     flex-shrink: 0;
+    flex-grow: 0;
+    // Ensure precise width calculation
+    min-width: calc(100% / 3);
+    max-width: calc(100% / 3);
 
     .slide-content {
       display: flex;
@@ -66,8 +82,10 @@
 
     .image-content {
       flex: 1;
-      min-height: 300px;
-      min-width: 300px;
+      width: 678px;
+      height: 477px;
+      min-width: 678px;
+      min-height: 477px;
       position: relative;
       border-radius: var(--saf-border-radius-sm);
       overflow: hidden;
@@ -81,65 +99,34 @@
       }
     }
 
-    .cards-content {
+    .products-content {
       flex: 1;
       display: flex;
       flex-direction: column;
-      gap: var(--saf-spacing-6);
+      gap: var(--saf-spacing-4);
       align-items: flex-start;
       justify-content: center;
       min-height: 300px;
       min-width: 300px;
 
-      .product-cards-list {
+      .product-links-list {
         display: flex;
         flex-direction: column;
-        gap: var(--saf-spacing-6);
+        gap: var(--saf-spacing-4);
         width: 100%;
 
-        .product-card {
-          display: flex;
-          align-items: flex-start;
-          gap: var(--saf-spacing-2);
-          padding: var(--saf-spacing-6);
-          background-color: var(--saf-color-background-primary);
-          border: 1px solid var(--saf-color-border-subtle);
-          border-radius: var(--saf-border-radius-lg);
+        .product-link {
           width: 100%;
+        }
 
-          .product-icon {
-            --saf-icon-color: var(--saf-color-icon-brand);
-            font-size: 24px;
-            flex-shrink: 0;
-            width: 24px;
-            height: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
+        ::ng-deep .product-link::part(control) {
+          width: 100%;
+          justify-content: flex-start;
+        }
 
-          .product-link {
-            font-family: var(--saf-font-family-heading);
-            font-size: var(--saf-font-size-lg);
-            font-weight: var(--saf-font-weight-medium);
-            line-height: var(--saf-line-height-tight);
-            color: var(--saf-color-text-primary);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: var(--saf-spacing-1);
-            flex: 1;
-
-            &:hover {
-              color: var(--saf-color-text-brand);
-            }
-
-            saf-icon {
-              --saf-icon-color: var(--saf-color-icon-brand);
-              font-size: var(--saf-font-size-md);
-              flex-shrink: 0;
-            }
-          }
+        ::ng-deep .product-link::part(content) {
+          width: 100%;
+          justify-content: flex-start;
         }
       }
     }
@@ -249,6 +236,16 @@
       .product-link {
         font-size: var(--saf-font-size-md);
       }
+    }
+  }
+}
+
+// Clean solution: Let Saffron handle the anchor styles naturally
+.extended-carousel.slide-3-active {
+  .slide-3 {
+    .products-content {
+      // Ensure no inherited border-radius affects the products area
+      border-radius: 0;
     }
   }
 }

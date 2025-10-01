@@ -15,34 +15,9 @@ export class ExtendedCarouselComponent {
   currentSlide = 0;
   totalSlides = 3;
 
-  // Product data for slide 3
-  products = [
-    {
-      name: 'extendedCarousel.slide3.products.indirectTax',
-      icon: 'receipt',
-      url: 'https://tax.thomsonreuters.com/en/onesource/indirect-tax',
-    },
-    {
-      name: 'extendedCarousel.slide3.products.directTax',
-      icon: 'coins',
-      url: 'https://tax.thomsonreuters.com/en/onesource/direct-tax',
-    },
-    {
-      name: 'extendedCarousel.slide3.products.globalTrade',
-      icon: 'globe',
-      url: 'https://tax.thomsonreuters.com/en/onesource/global-trade-management',
-    },
-    {
-      name: 'extendedCarousel.slide3.products.statutory',
-      icon: 'calendar',
-      url: 'https://tax.thomsonreuters.com/en/onesource/statutory',
-    },
-    {
-      name: 'extendedCarousel.slide3.products.informationReporting',
-      icon: 'file-certificate',
-      url: 'https://tax.thomsonreuters.com/en/onesource/information-reporting-aca-compliance',
-    },
-  ];
+  get isSlide3Active(): boolean {
+    return this.currentSlide === 2; // Slide 3 (index 2)
+  }
 
   nextSlide(): void {
     if (this.currentSlide < this.totalSlides - 1) {

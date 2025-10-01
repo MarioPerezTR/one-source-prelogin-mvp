@@ -20,7 +20,7 @@
 
   .welcome-section {
     padding: var(--saf-spacing-11) 0;
-    background: var(--saf-color-data-viz-gold-100);
+    background: var(--saf-color-background-subtle);
 
     .welcome-container {
       max-width: 1440px;
@@ -146,7 +146,7 @@
 // Extended carousel section
 .extended-carousel-section {
   width: 100%;
-  background: var(--saf-color-data-viz-gold-100);
+  background: var(--saf-color-background-subtle);
   padding: 0;
 }
 

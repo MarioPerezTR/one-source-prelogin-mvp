@@ -24,7 +24,7 @@
   width: 100%;
   position: relative;
   overflow: hidden;
-  min-height: 540px; // Ensure viewport accommodates full card height
+  height: 608px; // Match Figma dimensions exactly - same as login card
 }
 
 .carousel-slides {
@@ -61,8 +61,9 @@
 
   img {
     width: 100%;
-    height: 280px; // Increased image height to match proportions
+    height: 306px; // Updated height as requested
     object-fit: cover;
+    object-position: center 20%; // Position to show upper part and avoid cutting heads
     flex-shrink: 0;
   }
 

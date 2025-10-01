@@ -13,7 +13,9 @@
       "email": "Email",
       "password": "Password",
       "forgot": "Forgot email or password?",
-      "button": "Sign In"
+      "button": "Sign In",
+      "thomson_reuters_message": "Already upgraded to a Thomson Reuters account? Sign in using just your email.",
+      "thomson_reuters_button": "Thomson Reuters sign-in"
     },
     "carousel": {
       "synergy": {
@@ -74,11 +76,15 @@
         "description": "Explore how ONESOURCE tax software solutions work together across corporate tax and trade lifecycles.",
         "buttonText": "Learn about ONESOURCE",
         "products": {
-          "indirectTax": "Indirect Tax",
-          "directTax": "Direct Tax",
-          "globalTrade": "Global trade management",
-          "statutory": "Statutory reporting",
-          "informationReporting": "Information reporting and ACA compliance"
+          "indirectTax": "Indirect tax",
+          "directTax": "Direct tax",
+          "globalTradeManagement": "Global trade management",
+          "statutoryReporting": "Statutory reporting",
+          "informationReporting": "Information reporting and ACA compliance",
+          "trustTax": "Trust tax",
+          "taxDataManagement": "Tax data and process management",
+          "aiAssistedResearch": "AI-assisted regulatory research",
+          "partnershipsAlliances": "Partnerships and alliances"
         }
       }
     }
@@ -97,7 +103,9 @@
       "email": "Correo electrónico",
       "password": "Contraseña",
       "forgot": "¿Olvidaste el correo o la contraseña?",
-      "button": "Iniciar Sesión"
+      "button": "Iniciar Sesión",
+      "thomson_reuters_message": "¿Ya te actualizaste a una cuenta de Thomson Reuters? Inicia sesión usando solo tu correo electrónico.",
+      "thomson_reuters_button": "Iniciar sesión con Thomson Reuters"
     },
     "carousel": {
       "synergy": {
@@ -181,7 +189,9 @@
       "email": "Email",
       "password": "Mot de passe",
       "forgot": "Email ou mot de passe oublié?",
-      "button": "Se Connecter"
+      "button": "Se Connecter",
+      "thomson_reuters_message": "Déjà mis à niveau vers un compte Thomson Reuters ? Connectez-vous en utilisant seulement votre email.",
+      "thomson_reuters_button": "Connexion Thomson Reuters"
     },
     "carousel": {
       "synergy": {
@@ -265,7 +275,9 @@
       "email": "E-Mail",
       "password": "Passwort",
       "forgot": "E-Mail oder Passwort vergessen?",
-      "button": "Anmelden"
+      "button": "Anmelden",
+      "thomson_reuters_message": "Bereits auf ein Thomson Reuters-Konto aktualisiert? Melden Sie sich nur mit Ihrer E-Mail-Adresse an.",
+      "thomson_reuters_button": "Thomson Reuters Anmeldung"
     },
     "carousel": {
       "synergy": {

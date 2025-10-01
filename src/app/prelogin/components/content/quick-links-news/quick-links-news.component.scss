@@ -20,6 +20,7 @@ saf-card.quick-links-card {
     width: 100%;
     height: 240px;
     object-fit: cover;
+    object-position: center top;
   }
 
   .card-content {
@@ -141,7 +142,7 @@ saf-card.news-card {
 saf-card.news-card {
   // Orange color for newspaper icon
   saf-icon[slot="icon"] {
-    color: var(--color-interactive-hero-default, #d64000);
+    color: var(--saf--color-data-viz-racing-green-700, #123021);
   }
 
   .news-stories {

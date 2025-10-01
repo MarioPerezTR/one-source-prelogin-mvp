@@ -5,86 +5,227 @@
 
 .prelogin-footer {
   width: 100%;
-  background: var(--saf-color-background-default);
-  border-top: 1px solid #e0e0e0;
-  padding: var(--saf-spacing-10) 0;
+  background: var(--saf-color-background-strong); // #f2f2f2
+  border-top: 1px solid var(--saf-color-border-strong); // #d2d2d2
+  padding: var(--saf-spacing-5) 0; // 20px
   font-family: var(--saf-font-family-source-sans-3);
 }
 
 .footer-content {
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 0 var(--saf-spacing-7);
+  padding: 0 var(--saf-spacing-8); // 32px
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: var(--saf-spacing-6);
-  text-align: center;
+  gap: var(--saf-spacing-3); // 12px - more compact like Figma
 }
 
-.footer-logo {
-  .footer-logo-img {
-    height: 27px;
+// Top Section: Logo + Links
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--saf-spacing-6); // 24px
+  min-height: 26px;
+  width: 100%;
+}
+
+.footer-logo-section {
+  saf-logo {
+    height: 26px;
     width: auto;
-    object-fit: contain;
   }
 }
 
-.footer-links {
+.footer-top-links {
   display: flex;
-  align-items: center;
-  gap: var(--saf-spacing-4);
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-end;
 
-  saf-anchor {
-    font-family: var(--saf-font-family-source-sans-3);
-    font-weight: 400;
-    font-size: var(--saf-font-size-sm);
-    line-height: 1.5;
-    color: #006fc4;
-    text-decoration: underline;
-    text-decoration-skip-ink: none;
-    text-underline-position: from-font;
+  .footer-top-list {
+    display: flex;
+    gap: var(--saf-spacing-6); // 24px
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 
-    &:hover {
-      text-decoration: underline;
+    li {
+      saf-anchor {
+        font-family: var(--saf-font-family-source-sans-3);
+        font-size: var(--saf-font-size-sm); // 14px
+        font-weight: 400;
+        line-height: 1.35;
+        color: var(--saf-color-text-heavy); // #212223
+      }
     }
   }
+}
 
-  .footer-separator {
-    color: var(--saf-color-text-subtle);
-    font-size: var(--saf-font-size-sm);
-    margin: 0 var(--saf-spacing-1);
+// Fine Print
+.footer-fine-print {
+  width: 100%;
+  min-height: 19px; // Reduced height to match Figma
+  display: flex;
+  align-items: center;
+  padding: var(--saf-spacing-1) 0; // Add minimal padding
+
+  .fine-print-text {
+    font-family: var(--saf-font-family-source-sans-3);
+    font-size: var(--saf-font-size-sm); // 14px
+    font-weight: 400;
+    line-height: 1.35;
+    color: var(--saf-color-text-subtle); // #666666
+    margin: 0;
+    width: 100%;
   }
 }
 
-.footer-copyright {
-  font-family: var(--saf-font-family-source-sans-3);
-  font-weight: 400;
-  font-size: var(--saf-font-size-xs);
-  line-height: 1.5;
-  color: var(--saf-color-text-subtle);
-  max-width: 800px;
-  margin: 0 auto;
+// Main Footer Links Section
+.footer-links-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--saf-spacing-4); // 16px - compact spacing like Figma
+  width: 100%;
 }
 
+// Column Headers
+.footer-columns-headers {
+  display: flex;
+  gap: var(--saf-spacing-6); // 24px - match column gap
+  width: 100%;
+
+  .column-header {
+    flex: 1;
+    min-width: 0; // Allow flex shrinking
+    font-family: var(--saf-font-family-clario);
+    font-size: var(--saf-font-size-md); // 16px
+    font-weight: 500;
+    line-height: 1.5;
+    color: #111111; // Meta / Black
+    margin: 0;
+    padding: 0; // Ensure no padding that could misalign with links
+  }
+}
+
+// Column Links
+.footer-columns-links {
+  display: flex;
+  gap: var(--saf-spacing-6); // 24px - keep consistent with headers
+  width: 100%;
+  align-items: flex-start;
+
+  .footer-column {
+    flex: 1;
+    min-width: 0; // Allow flex shrinking
+    padding-left: 0; // Ensure no extra padding that could misalign with headers
+
+    .footer-links-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin: 0;
+        padding: 0;
+
+        &:not(:last-child) {
+          margin-bottom: var(
+            --saf-spacing-3
+          ); // 12px gap between items (exact Figma spec) - RESTORED
+        }
+      }
+    }
+  }
+}
+
+// Footer links styling - Clean and specific approach using Saffron typography token
+:host ::ng-deep .footer-link {
+  display: flex !important;
+  align-items: center !important;
+  gap: var(--saf-spacing-1) !important; // 4px gap between text and icon
+  padding: var(--saf-spacing-1) 0 !important;
+  border-radius: 2px !important;
+  font: var(--saf-type-body-link-sm-regular-standard) !important;
+  color: var(--saf-color-text-heavy) !important;
+  width: auto !important;
+
+  saf-icon {
+    color: var(--saf-color-text-heavy) !important;
+    font-size: 16px !important;
+    width: 16px !important;
+    height: 16px !important;
+    flex-shrink: 0 !important;
+    padding-left: var(--saf-spacing-1) !important;
+  }
+}
+
+// Official Saffron recommendation - no underline by default, underline on hover
+:host ::ng-deep saf-anchor.footer-link::part(content) {
+  text-decoration: none;
+}
+
+:host ::ng-deep saf-anchor.footer-link:hover::part(content) {
+  text-decoration: underline;
+}
+
+// Perfect alignment reset - ensures headers and links start at exact same position
+.footer-columns-headers,
+.footer-columns-links {
+  .column-header,
+  .footer-links-list {
+    margin: 0 !important;
+    padding: 0 !important;
+    padding-left: 0 !important;
+  }
+}
+
+.footer-links-list {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  padding-left: 0 !important; // Critical: no left padding ensures alignment with h4 headers
+
+  li {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    padding-left: 0 !important;
+  }
+} // Responsive Design
 @media (max-width: 768px) {
   .footer-content {
     padding: 0 var(--saf-spacing-4);
     gap: var(--saf-spacing-5);
   }
 
-  .footer-links {
+  .footer-top {
     flex-direction: column;
-    gap: var(--saf-spacing-3);
+    align-items: flex-start;
+    gap: var(--saf-spacing-4);
+  }
 
-    .footer-separator {
-      display: none;
+  .footer-top-links {
+    .footer-top-list {
+      flex-direction: column;
+      gap: var(--saf-spacing-3);
+      align-items: flex-start;
     }
   }
 
-  .footer-copyright {
-    font-size: 11px;
+  .footer-columns-headers {
+    flex-direction: column;
+    gap: var(--saf-spacing-3);
+  }
+
+  .footer-columns-links {
+    flex-direction: column;
+    gap: var(--saf-spacing-5);
+  }
+
+  .footer-fine-print {
+    .fine-print-text {
+      font-size: 12px;
+    }
   }
 }
