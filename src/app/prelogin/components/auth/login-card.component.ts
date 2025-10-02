@@ -10,4 +10,6 @@ import { TranslatePipe } from '../../../pipes/translate.pipe';
   templateUrl: './login-card.component.html',
   styleUrls: ['./login-card.component.scss'],
 })
-export class LoginCardComponent {}
+export class LoginCardComponent {
+  // Component logic here
+}

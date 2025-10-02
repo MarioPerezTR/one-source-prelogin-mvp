@@ -13,7 +13,7 @@
 
 .card-body {
   flex: 1;
-  padding: var(--saf-spacing-2) var(--saf-spacing-2) 0 var(--saf-spacing-2);
+  padding: 0 var(--saf-spacing-2); // 8px horizontal padding (adds to card's native 24px = 32px total)
   display: flex;
   flex-direction: column;
 }
@@ -21,8 +21,8 @@
 .card-header {
   display: flex;
   flex-direction: column;
-  gap: var(--saf-spacing-6);
-  margin-bottom: var(--saf-spacing-6);
+  gap: var(--saf-spacing-6); // 24px gap between logo and content
+  padding: var(--saf-spacing-2) var(--saf-spacing-2) 0 var(--saf-spacing-2); // 8px padding (adds to card's native 24px = 32px total)
 
   .tr-logo {
     height: 30px;
@@ -40,6 +40,7 @@
       line-height: 0;
       color: var(--saf-color-text-heavy);
       width: 100%;
+      margin-bottom: var(--saf-spacing-6); // 24px spacing token
 
       .card-title {
         font: var(--saf-type-heading-default-2xl-strong-standard);
@@ -123,7 +124,7 @@
 
 .card-footer {
   border-top: none;
-  padding: 13px var(--saf-spacing-2) var(--saf-spacing-2) var(--saf-spacing-2);
+  padding: 0 var(--saf-spacing-2) var(--saf-spacing-2) var(--saf-spacing-2); // 8px padding (adds to card's native 24px = 32px total)
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -141,6 +142,13 @@
     width: 100%;
   }
 
+  // Make both button containers behave the same way
+  .buttons,
+  .thomson-reuters-container {
+    flex: 1;
+    max-width: 100%;
+  }
+
   ::ng-deep .sign-in-button::part(control) {
     width: 100%;
   }
@@ -155,16 +163,16 @@
     border: 1px solid var(--saf-color-border-stronger, #8a8a8a);
     border-radius: var(--saf-border-radius-sm);
     padding: var(--saf-spacing-4) var(--saf-spacing-5);
-    margin-top: var(--saf-spacing-3);
+    margin-top: var(--saf-spacing-6); // 24px spacing token
     display: flex;
     flex-direction: column;
     gap: var(--saf-spacing-2);
     align-items: center;
     text-align: center;
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.16);
+    width: 93%;
 
     .upgrade-message {
-      font: var(--saf-type-body-default-md-regular-standard);
       color: var(--saf-color-text-heavy, #212223);
       margin: 0;
       line-height: 1.5;

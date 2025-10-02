@@ -19,6 +19,10 @@ export class ExtendedCarouselComponent {
     return this.currentSlide === 2; // Slide 3 (index 2)
   }
 
+  get slideIndicatorText(): string {
+    return `Slide ${this.currentSlide + 1} of ${this.totalSlides}`;
+  }
+
   nextSlide(): void {
     if (this.currentSlide < this.totalSlides - 1) {
       this.currentSlide++;

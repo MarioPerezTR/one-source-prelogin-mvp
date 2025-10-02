@@ -6,6 +6,7 @@
   padding: var(--saf-spacing-4) var(--saf-spacing-7);
   box-sizing: border-box;
   background: var(--saf-color-background-default);
+  border-bottom: var(--saf-line-width-thin) solid var(--saf-color-border-strong);
   position: relative;
   z-index: 10001;
 
@@ -14,29 +15,37 @@
     flex: 1;
     align-items: center;
     justify-content: flex-end;
-    min-height: 32px;
+    min-height: 40px; // Increased height for better visual balance
+    padding-right: var(
+      --saf-spacing-1
+    ); // Small right padding for better spacing
 
     .language-selector {
       display: flex;
-      gap: var(--saf-spacing-2);
+      gap: var(--saf-spacing-2); // 8px gap between label and combobox
       align-items: center;
-      width: 356px;
+      width: auto; // Auto width for better responsiveness
+      min-width: 300px; // Minimum width to maintain design integrity
+      max-width: 400px; // Maximum width for larger screens
       isolation: isolate;
 
       .language-label {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: flex-start;
+        justify-content: center; // Center vertically for better alignment
         z-index: 1000;
+        flex-shrink: 0; // Prevent label from shrinking
+
         .label-text {
           font-family: var(--saf-font-family-clario);
           font-weight: var(--saf-font-weight-medium);
           font-size: var(--saf-font-size-md);
-          line-height: 1.35;
+          line-height: 1.5; // Better line height for vertical alignment
           color: var(--saf-color-text-heavy);
           white-space: nowrap;
           margin: 0;
+          padding: var(--saf-spacing-1) 0; // Add small vertical padding
         }
       }
 
@@ -44,67 +53,58 @@
         flex: 1;
         z-index: 1001;
         position: relative;
-
-        :host ::ng-deep & {
-          width: 100%;
-
-          saf-combobox {
-            width: 100%;
-
-            .saf-field__label {
-              display: none !important;
-            }
-
-            // Style the input field
-            .saf-field__input {
-              background: var(
-                --color-interactive-background-default,
-                #ffffff
-              ) !important;
-              border: 1px solid #8a8a8a !important;
-              border-radius: 4px !important;
-              height: 32px !important;
-              padding: 4px 32px 4px 12px !important;
-              font-family: "Source Sans 3", sans-serif !important;
-              font-weight: 400 !important;
-              font-size: 16px !important;
-              line-height: 1.35 !important;
-              color: var(--color-text-heavy, #212223) !important;
-            }
-
-            // Fix dropdown positioning for combobox - more aggressive approach
-            .saf-combobox__dropdown,
-            .saf-popover,
-            .saf-combobox-dropdown,
-            [role="listbox"],
-            .saf-dropdown {
-              right: 0 !important;
-              left: auto !important;
-              min-width: 250px !important;
-              max-width: 300px !important;
-              transform-origin: top right !important;
-              transform: translateX(0) !important;
-              z-index: 9999 !important;
-            }
-          }
-        }
-
-        // Additional global styles for the dropdown
-        :host ::ng-deep {
-          saf-select {
-            .saf-popover {
-              right: 0 !important;
-              left: auto !important;
-            }
-          }
-        }
       }
     }
   }
 }
 
-// Global z-index fix for saf-combobox dropdown
+// Global styles for saf-combobox
 :host ::ng-deep {
+  .language-combobox {
+    width: 100%;
+
+    saf-combobox {
+      width: 100%;
+
+      .saf-field__label {
+        display: none !important;
+      }
+
+      // Style the input field
+      .saf-field__input {
+        background: var(
+          --color-interactive-background-default,
+          #ffffff
+        ) !important;
+        border: 1px solid #8a8a8a !important;
+        border-radius: 4px !important;
+        height: 32px !important;
+        padding: 4px 32px 4px 12px !important;
+        font-family: "Source Sans 3", sans-serif !important;
+        font-weight: 400 !important;
+        font-size: 16px !important;
+        line-height: 1.35 !important;
+        color: var(--color-text-heavy, #212223) !important;
+      }
+
+      // Fix dropdown positioning for combobox
+      .saf-combobox__dropdown,
+      .saf-popover,
+      .saf-combobox-dropdown,
+      [role="listbox"],
+      .saf-dropdown {
+        right: 0 !important;
+        left: auto !important;
+        min-width: 250px !important;
+        max-width: 300px !important;
+        transform-origin: top right !important;
+        transform: translateX(0) !important;
+        z-index: 9999 !important;
+      }
+    }
+  }
+
+  // Additional z-index fix
   saf-combobox {
     [part="listbox"],
     .listbox {
@@ -114,30 +114,38 @@
   }
 }
 
-// Even more global approach - this targets the shadow DOM parts
-::ng-deep saf-combobox {
-  [part="listbox"] {
-    z-index: 9999 !important;
-    position: fixed !important;
-  }
-}
-
 // Responsive design
 @media (max-width: 768px) {
   .language-banner {
     padding: var(--saf-spacing-3) var(--saf-spacing-4); // Reduced padding on mobile
 
     .language-content {
+      padding-right: 0; // Remove extra padding on mobile
+
       .language-selector {
         width: 100%;
+        min-width: unset;
+        max-width: unset;
         flex-direction: column;
         align-items: flex-start;
         gap: var(--saf-spacing-1);
+
+        .language-label {
+          .label-text {
+            font-size: var(--saf-font-size-sm); // Smaller font on mobile
+          }
+        }
 
         .language-combobox {
           width: 100%;
         }
       }
     }
+  }
+}
+
+@media (max-width: 480px) {
+  .language-banner {
+    padding: var(--saf-spacing-2) var(--saf-spacing-3); // Even smaller padding on very small screens
   }
 }

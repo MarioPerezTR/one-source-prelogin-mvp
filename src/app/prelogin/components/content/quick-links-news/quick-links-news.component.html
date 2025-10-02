@@ -22,6 +22,10 @@
             [href]="link.url"
             [target]="link.external ? '_blank' : '_self'"
             [rel]="link.external ? 'noopener noreferrer' : ''"
+            [attr.aria-label]="
+              (link.key | translate) +
+              (link.external ? ', opens in a new tab' : '')
+            "
             class="quick-link"
             >{{ link.key | translate
             }}<saf-icon
@@ -59,6 +63,10 @@
             [href]="article.url"
             [target]="article.external ? '_blank' : '_self'"
             [rel]="article.external ? 'noopener noreferrer' : ''"
+            [attr.aria-label]="
+              (article.titleKey | translate) +
+              (article.external ? ', opens in a new tab' : '')
+            "
             class="news-link"
           >
             {{ article.titleKey | translate }}
@@ -91,6 +99,7 @@
         href="#"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Read more news, opens in a new tab"
         class="read-more-link"
       >
         {{ "news.readMore" | translate }}

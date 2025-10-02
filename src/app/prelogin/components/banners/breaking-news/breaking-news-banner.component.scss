@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 169px;
+  padding: var(--saf-spacing-3) var(--saf-spacing-8); // 12px 32px - using proper Saffron tokens
   box-sizing: border-box;
   gap: var(--saf-spacing-1);
 
@@ -42,19 +42,25 @@
     padding-left: var(--saf-spacing-1) !important;
   }
 
-  &:hover {
+  // Correct hover selector targeting the internal control
+  &:hover .control {
     color: var(--saf-color-white) !important;
-
-    saf-icon {
-      color: var(--saf-color-white) !important;
-      padding-left: var(--saf-spacing-1) !important;
-    }
   }
+
+  // Alternative approach using ::part
+  &:hover::part(control) {
+    color: var(--saf-color-white) !important;
+  }
+}
+
+// More specific hover override for saf-anchor internal structure
+:host ::ng-deep .breaking-news-link:hover .control {
+  color: var(--saf-color-white) !important;
 }
 
 @media (max-width: 768px) {
   .breaking-news-banner {
-    padding: 10px var(--saf-spacing-4);
+    padding: var(--saf-spacing-3) var(--saf-spacing-4); // Consistent token usage
 
     .breaking-news-content {
       .breaking-news-text {
@@ -62,5 +68,11 @@
         text-align: center;
       }
     }
+  }
+}
+
+@media (max-width: 480px) {
+  .breaking-news-banner {
+    padding: var(--saf-spacing-2) var(--saf-spacing-3); // Even smaller padding on mobile
   }
 }

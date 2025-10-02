@@ -1,12 +1,20 @@
 <!-- Extended carousel component -->
-<div class="extended-carousel" [class.slide-3-active]="isSlide3Active">
+<section
+  class="extended-carousel"
+  [class.slide-3-active]="isSlide3Active"
+  aria-labelledby="extended-carousel-heading"
+>
+  <h3 id="extended-carousel-heading" class="visually-hidden">
+    ONESOURCE Product Information
+  </h3>
+
   <div class="carousel-container">
-    <div
+    <ul
       class="slides-wrapper"
       [style.transform]="'translateX(-' + (currentSlide * 100) / 3 + '%)'"
     >
       <!-- Slide 1: Find product courses -->
-      <div class="slide slide-1">
+      <li class="slide slide-1">
         <div class="slide-content">
           <div class="text-content">
             <saf-text appearance="heading-4xl" role="heading" aria-level="2">
@@ -24,13 +32,20 @@
                 <saf-anchor
                   href="https://onesourceuniversity.thomsonreuters.com/learn/signin"
                   target="_blank"
+                  rel="noopener noreferrer"
                   appearance="cta-primary"
+                  [attr.aria-label]="
+                    ('extendedCarousel.slide1.buttonText' | translate) +
+                    ', ' +
+                    ('common.opensInNewTab' | translate)
+                  "
                 >
                   {{ "extendedCarousel.slide1.buttonText" | translate }}
                   <saf-icon
                     slot="end"
                     icon-name="arrow-up-right-from-square"
                     appearance="solid"
+                    aria-hidden="true"
                   ></saf-icon>
                 </saf-anchor>
               </div>
@@ -44,10 +59,10 @@
             />
           </div>
         </div>
-      </div>
+      </li>
 
       <!-- Slide 2: Browse expert-led webinars -->
-      <div class="slide slide-2">
+      <li class="slide slide-2">
         <div class="slide-content">
           <div class="text-content">
             <saf-text appearance="heading-4xl" role="heading" aria-level="2">
@@ -65,13 +80,20 @@
                 <saf-anchor
                   href="https://tax.thomsonreuters.com/en/insights/webinars#t=webinars&sort=%40tr_wpublishedtime%20descending&numberOfResults=12&f:@tr_worganizationtype=[Corporation]"
                   target="_blank"
+                  rel="noopener noreferrer"
                   appearance="cta-primary"
+                  [attr.aria-label]="
+                    ('extendedCarousel.slide2.buttonText' | translate) +
+                    ', ' +
+                    ('common.opensInNewTab' | translate)
+                  "
                 >
                   {{ "extendedCarousel.slide2.buttonText" | translate }}
                   <saf-icon
                     slot="end"
                     icon-name="arrow-up-right-from-square"
                     appearance="solid"
+                    aria-hidden="true"
                   ></saf-icon>
                 </saf-anchor>
               </div>
@@ -85,10 +107,10 @@
             />
           </div>
         </div>
-      </div>
+      </li>
 
       <!-- Slide 3: Drive accurate results with ONESOURCE -->
-      <div class="slide slide-3">
+      <li class="slide slide-3">
         <div class="slide-content">
           <div class="text-content">
             <saf-text appearance="heading-4xl" role="heading" aria-level="2">
@@ -106,13 +128,20 @@
                 <saf-anchor
                   href="https://tax.thomsonreuters.com/en/onesource"
                   target="_blank"
+                  rel="noopener noreferrer"
                   appearance="cta-primary"
+                  [attr.aria-label]="
+                    ('extendedCarousel.slide3.buttonText' | translate) +
+                    ', ' +
+                    ('common.opensInNewTab' | translate)
+                  "
                 >
                   {{ "extendedCarousel.slide3.buttonText" | translate }}
                   <saf-icon
                     slot="end"
                     icon-name="arrow-up-right-from-square"
                     appearance="solid"
+                    aria-hidden="true"
                   ></saf-icon>
                 </saf-anchor>
               </div>
@@ -123,51 +152,75 @@
               <saf-anchor
                 href="https://tax.thomsonreuters.com/en/onesource/indirect-tax"
                 target="_blank"
+                rel="noopener noreferrer"
                 appearance="cta-secondary"
                 class="product-link"
+                [attr.aria-label]="
+                  ('extendedCarousel.slide3.products.indirectTax' | translate) +
+                  ', ' +
+                  ('common.opensInNewTab' | translate)
+                "
               >
                 <saf-icon
                   slot="start"
                   icon-name="receipt"
                   appearance="light"
+                  aria-hidden="true"
                 ></saf-icon>
                 {{ "extendedCarousel.slide3.products.indirectTax" | translate }}
                 <saf-icon
                   slot="end"
                   icon-name="arrow-up-right-from-square"
                   appearance="light"
+                  aria-hidden="true"
                 ></saf-icon>
               </saf-anchor>
 
               <saf-anchor
                 href="https://tax.thomsonreuters.com/en/onesource/corporate-tax"
                 target="_blank"
+                rel="noopener noreferrer"
                 appearance="cta-secondary"
                 class="product-link"
+                [attr.aria-label]="
+                  ('extendedCarousel.slide3.products.directTax' | translate) +
+                  ', ' +
+                  ('common.opensInNewTab' | translate)
+                "
               >
                 <saf-icon
                   slot="start"
                   icon-name="coins"
                   appearance="light"
+                  aria-hidden="true"
                 ></saf-icon>
                 {{ "extendedCarousel.slide3.products.directTax" | translate }}
                 <saf-icon
                   slot="end"
                   icon-name="arrow-up-right-from-square"
                   appearance="light"
+                  aria-hidden="true"
                 ></saf-icon>
               </saf-anchor>
 
               <saf-anchor
                 href="https://tax.thomsonreuters.com/en/onesource/trade-management"
                 target="_blank"
+                rel="noopener noreferrer"
                 appearance="cta-secondary"
                 class="product-link"
+                [attr.aria-label]="
+                  ('extendedCarousel.slide3.products.globalTradeManagement'
+                    | translate) +
+                  ', ' +
+                  ('common.opensInNewTab' | translate)
+                "
               >
                 <saf-icon
                   slot="start"
                   icon-name="globe"
                   appearance="light"
+                  aria-hidden="true"
                 ></saf-icon>
                 {{
                   "extendedCarousel.slide3.products.globalTradeManagement"
@@ -177,19 +230,28 @@
                   slot="end"
                   icon-name="arrow-up-right-from-square"
                   appearance="light"
+                  aria-hidden="true"
                 ></saf-icon>
               </saf-anchor>
 
               <saf-anchor
                 href="https://tax.thomsonreuters.com/en/onesource/statutory-reporting"
                 target="_blank"
+                rel="noopener noreferrer"
                 appearance="cta-secondary"
                 class="product-link"
+                [attr.aria-label]="
+                  ('extendedCarousel.slide3.products.statutoryReporting'
+                    | translate) +
+                  ', ' +
+                  ('common.opensInNewTab' | translate)
+                "
               >
                 <saf-icon
                   slot="start"
                   icon-name="calendar"
                   appearance="light"
+                  aria-hidden="true"
                 ></saf-icon>
                 {{
                   "extendedCarousel.slide3.products.statutoryReporting"
@@ -199,19 +261,28 @@
                   slot="end"
                   icon-name="arrow-up-right-from-square"
                   appearance="light"
+                  aria-hidden="true"
                 ></saf-icon>
               </saf-anchor>
 
               <saf-anchor
                 href="https://tax.thomsonreuters.com/en/onesource/information-reporting"
                 target="_blank"
+                rel="noopener noreferrer"
                 appearance="cta-secondary"
                 class="product-link"
+                [attr.aria-label]="
+                  ('extendedCarousel.slide3.products.informationReporting'
+                    | translate) +
+                  ', ' +
+                  ('common.opensInNewTab' | translate)
+                "
               >
                 <saf-icon
                   slot="start"
                   icon-name="file-certificate"
                   appearance="light"
+                  aria-hidden="true"
                 ></saf-icon>
                 {{
                   "extendedCarousel.slide3.products.informationReporting"
@@ -221,38 +292,55 @@
                   slot="end"
                   icon-name="arrow-up-right-from-square"
                   appearance="light"
+                  aria-hidden="true"
                 ></saf-icon>
               </saf-anchor>
 
               <saf-anchor
                 href="https://tax.thomsonreuters.com/en/onesource/trust-tax"
                 target="_blank"
+                rel="noopener noreferrer"
                 appearance="cta-secondary"
                 class="product-link"
+                [attr.aria-label]="
+                  ('extendedCarousel.slide3.products.trustTax' | translate) +
+                  ', ' +
+                  ('common.opensInNewTab' | translate)
+                "
               >
                 <saf-icon
                   slot="start"
                   icon-name="shield"
                   appearance="light"
+                  aria-hidden="true"
                 ></saf-icon>
                 {{ "extendedCarousel.slide3.products.trustTax" | translate }}
                 <saf-icon
                   slot="end"
                   icon-name="arrow-up-right-from-square"
                   appearance="light"
+                  aria-hidden="true"
                 ></saf-icon>
               </saf-anchor>
 
               <saf-anchor
                 href="https://tax.thomsonreuters.com/en/onesource/tax-data-management"
                 target="_blank"
+                rel="noopener noreferrer"
                 appearance="cta-secondary"
                 class="product-link"
+                [attr.aria-label]="
+                  ('extendedCarousel.slide3.products.taxDataManagement'
+                    | translate) +
+                  ', ' +
+                  ('common.opensInNewTab' | translate)
+                "
               >
                 <saf-icon
                   slot="start"
                   icon-name="pen-ruler"
                   appearance="light"
+                  aria-hidden="true"
                 ></saf-icon>
                 {{
                   "extendedCarousel.slide3.products.taxDataManagement"
@@ -262,19 +350,28 @@
                   slot="end"
                   icon-name="arrow-up-right-from-square"
                   appearance="light"
+                  aria-hidden="true"
                 ></saf-icon>
               </saf-anchor>
 
               <saf-anchor
                 href="https://tax.thomsonreuters.com/en/onesource/ai-research"
                 target="_blank"
+                rel="noopener noreferrer"
                 appearance="cta-secondary"
                 class="product-link"
+                [attr.aria-label]="
+                  ('extendedCarousel.slide3.products.aiAssistedResearch'
+                    | translate) +
+                  ', ' +
+                  ('common.opensInNewTab' | translate)
+                "
               >
                 <saf-icon
                   slot="start"
                   icon-name="sparkles"
                   appearance="light"
+                  aria-hidden="true"
                 ></saf-icon>
                 {{
                   "extendedCarousel.slide3.products.aiAssistedResearch"
@@ -284,19 +381,28 @@
                   slot="end"
                   icon-name="arrow-up-right-from-square"
                   appearance="light"
+                  aria-hidden="true"
                 ></saf-icon>
               </saf-anchor>
 
               <saf-anchor
                 href="https://tax.thomsonreuters.com/en/onesource/partnerships"
                 target="_blank"
+                rel="noopener noreferrer"
                 appearance="cta-secondary"
                 class="product-link"
+                [attr.aria-label]="
+                  ('extendedCarousel.slide3.products.partnershipsAlliances'
+                    | translate) +
+                  ', ' +
+                  ('common.opensInNewTab' | translate)
+                "
               >
                 <saf-icon
                   slot="start"
                   icon-name="handshake"
                   appearance="light"
+                  aria-hidden="true"
                 ></saf-icon>
                 {{
                   "extendedCarousel.slide3.products.partnershipsAlliances"
@@ -306,39 +412,60 @@
                   slot="end"
                   icon-name="arrow-up-right-from-square"
                   appearance="light"
+                  aria-hidden="true"
                 ></saf-icon>
               </saf-anchor>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </li>
+    </ul>
+  </div>
+
+  <div
+    class="live-region visually-hidden"
+    aria-live="polite"
+    aria-atomic="true"
+  >
+    {{ slideIndicatorText }}
   </div>
 
   <!-- Carousel controls -->
-  <div class="carousel-controls">
+  <nav class="carousel-controls" aria-label="Carousel pagination">
     <saf-button
       icon-only
       appearance="secondary"
-      aria-label="{{ 'carousel.previousSlide' | translate }}"
+      density="standard"
+      class="btn-prev"
+      a11y-aria-label="Previous slide"
       (click)="previousSlide()"
       [disabled]="currentSlide === 0"
     >
-      <saf-icon icon-name="chevron-left" appearance="solid"></saf-icon>
+      <saf-icon
+        icon-name="chevron-left"
+        appearance="solid"
+        aria-hidden="true"
+      ></saf-icon>
     </saf-button>
 
     <div class="slide-indicator">
-      <span>Slide {{ currentSlide + 1 }} of {{ totalSlides }}</span>
+      <saf-text appearance="body-md">{{ slideIndicatorText }}</saf-text>
     </div>
 
     <saf-button
       icon-only
       appearance="secondary"
-      aria-label="{{ 'carousel.nextSlide' | translate }}"
+      density="standard"
+      class="btn-next"
+      a11y-aria-label="Next slide"
       (click)="nextSlide()"
       [disabled]="currentSlide === totalSlides - 1"
     >
-      <saf-icon icon-name="chevron-right" appearance="solid"></saf-icon>
+      <saf-icon
+        icon-name="chevron-right"
+        appearance="solid"
+        aria-hidden="true"
+      ></saf-icon>
     </saf-button>
-  </div>
-</div>
+  </nav>
+</section>

@@ -1,11 +1,12 @@
 {
   "en-US": {
     "common": {
-      "language": "Language"
+      "language": "Language",
+      "opensInNewTab": "opens in a new tab"
     },
     "breaking": {
-      "news": "One system under Maintenance. All other systems are operational. See",
-      "link": "systems status"
+      "news": "Service disruptions may affect your experience.",
+      "link": "Check system status"
     },
     "login": {
       "title": "Sign in to ONESOURCE",
@@ -13,6 +14,8 @@
       "email": "Email",
       "password": "Password",
       "forgot": "Forgot email or password?",
+      "showPassword": "Show password",
+      "hidePassword": "Hide password",
       "button": "Sign In",
       "thomson_reuters_message": "Already upgraded to a Thomson Reuters account? Sign in using just your email.",
       "thomson_reuters_button": "Thomson Reuters sign-in"
@@ -91,7 +94,8 @@
   },
   "es-ES": {
     "common": {
-      "language": "Idioma"
+      "language": "Idioma",
+      "opensInNewTab": "se abre en una nueva pestaña"
     },
     "breaking": {
       "news": "Un sistema en mantenimiento. Todos los demás sistemas están operativos. Ver",
@@ -177,7 +181,8 @@
   },
   "fr-FR": {
     "common": {
-      "language": "Langue"
+      "language": "Langue",
+      "opensInNewTab": "s'ouvre dans un nouvel onglet"
     },
     "breaking": {
       "news": "Un système en maintenance. Tous les autres systèmes sont opérationnels. Voir",
@@ -263,7 +268,8 @@
   },
   "de-DE": {
     "common": {
-      "language": "Sprache"
+      "language": "Sprache",
+      "opensInNewTab": "öffnet in einem neuen Tab"
     },
     "breaking": {
       "news": "Ein System in Wartung. Alle anderen Systeme sind betriebsbereit. Siehe",

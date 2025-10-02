@@ -24,7 +24,7 @@
   width: 100%;
   position: relative;
   overflow: hidden;
-  height: 608px; // Match Figma dimensions exactly - same as login card
+  height: 600px;
 }
 
 .carousel-slides {
@@ -126,6 +126,13 @@
   align-self: flex-start;
 }
 
+// Use ::ng-deep approach like breaking news banner - target specific class
+:host ::ng-deep .explore-link {
+  saf-icon[slot="end"] {
+    padding-left: var(--saf-spacing-2) !important; // 8px spacing for icon
+  }
+}
+
 .carousel-controls {
   display: flex;
   align-items: center;
@@ -135,8 +142,10 @@
   .slide-indicator {
     padding: var(--saf-spacing-2);
 
-    .slide-text {
-      font: var(--saf-type-body-default-md-regular-standard);
+    ::ng-deep saf-text {
+      --saf-text-color: var(--saf-color-text-secondary);
+      font-family: var(--saf-type-body-default-md-regular-standard);
+      white-space: nowrap;
     }
   }
 }

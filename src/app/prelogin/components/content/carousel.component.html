@@ -12,8 +12,8 @@
         >
           <img
             slot="media"
-            src="https://www.thomsonreuters.com/content/dam/ewp-m/images/legal/en/photography/240165.jpg.transform/rect-768/q90/image.jpg"
-            alt="SYNERGY 2025 Conference"
+            src="assets/synergy-conf-slide1.jpg"
+            alt="Professional business conference attendees networking and discussing innovative solutions at SYNERGY 2025 event"
             loading="lazy"
           />
 
@@ -25,11 +25,18 @@
           </p>
 
           <div slot="controls">
-            <saf-anchor href="#" class="explore-link">
+            <saf-anchor
+              href="#"
+              class="explore-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Explore our session topics, opens in a new tab"
+            >
               {{ "carousel.synergy.link" | translate }}
               <saf-icon
                 slot="end"
                 icon-name="arrow-up-right-from-square"
+                aria-hidden="true"
               ></saf-icon>
             </saf-anchor>
           </div>
@@ -45,8 +52,8 @@
         >
           <img
             slot="media"
-            src="https://insight.thomsonreuters.com/sea/legal/wp-content/uploads/sites/9/2025/06/251216_922168087-scaled-e1750978600736.jpeg"
-            alt="Future of Professionals Report 2025"
+            src="assets/future-of-profesionals-report-slide02.jpg"
+            alt="Digital transformation and AI analytics visualization representing the future of professional work and technological advancement"
             loading="lazy"
           />
 
@@ -57,11 +64,18 @@
           </p>
 
           <div slot="controls">
-            <saf-anchor href="#" class="explore-link">
+            <saf-anchor
+              href="#"
+              class="explore-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Read the report, opens in a new tab"
+            >
               {{ "carousel.future.link" | translate }}
               <saf-icon
                 slot="end"
                 icon-name="arrow-up-right-from-square"
+                aria-hidden="true"
               ></saf-icon>
             </saf-anchor>
           </div>
@@ -75,29 +89,24 @@
     aria-live="polite"
     aria-atomic="true"
   >
-    Item {{ current + 1 }} of 2
+    Slide {{ current + 1 }} of 2
   </div>
 
-  <div class="carousel-controls">
+  <nav class="carousel-controls" aria-label="Carousel pagination">
     <saf-button
       appearance="secondary"
       icon-only
       density="standard"
       class="btn-prev"
-      title="Previous slide"
-      a11y-aria-description="Navigate to the previous content slide"
+      a11y-aria-label="Previous slide"
       [disabled]="isPrevDisabled"
       (click)="prev()"
     >
-      <saf-icon
-        icon-name="chevron-left"
-        presentation="false"
-        aria-label="Previous"
-      ></saf-icon>
+      <saf-icon icon-name="chevron-left" aria-hidden="true"></saf-icon>
     </saf-button>
 
-    <div class="slide-indicator">
-      <span class="slide-text">Slide {{ current + 1 }} of 2</span>
+    <div class="slide-indicator" aria-live="polite" aria-atomic="true">
+      <saf-text appearance="body-md">Slide {{ current + 1 }} of 2</saf-text>
     </div>
 
     <saf-button
@@ -105,16 +114,11 @@
       icon-only
       density="standard"
       class="btn-next"
-      title="Next slide"
-      a11y-aria-description="Navigate to the next content slide"
+      a11y-aria-label="Next slide"
       [disabled]="isNextDisabled"
       (click)="next()"
     >
-      <saf-icon
-        icon-name="chevron-right"
-        presentation="false"
-        aria-label="Next"
-      ></saf-icon>
+      <saf-icon icon-name="chevron-right" aria-hidden="true"></saf-icon>
     </saf-button>
-  </div>
+  </nav>
 </section>
