@@ -1,0 +1,489 @@
+.ci-login-page {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+// Header Styles
+.rebrand-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0 24px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  flex-shrink: 0;
+  z-index: 999;
+  position: relative;
+}
+
+.rebrand-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
+  img {
+    height: 24px;
+    width: auto;
+  }
+}
+
+.rebrand-separator {
+  color: #666666;
+  font-size: 16px;
+  margin: 0 8px;
+}
+
+.rebrand-name {
+  color: #d64000;
+  font: 500 20px / 120% Knowledge2017, Helvetica Neue, Arial, sans-serif;
+  flex-grow: 1;
+}
+
+.rebrand-supportLink {
+  display: flex;
+  align-items: center;
+  color: #666666;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: #f5f5f5;
+  }
+
+  svg {
+    width: 16px;
+    height: 18px;
+  }
+}
+
+.u-hiddenVisually {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+// Main Content
+.ci-login-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  position: relative;
+  overflow-y: auto;
+}
+
+// Login Card
+.login-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+.login-card-header {
+  padding: 40px 32px 24px;
+  text-align: left;
+
+  .tr-logo {
+    height: 30px;
+    width: 211.185px;
+    margin-bottom: 24px;
+  }
+
+  .header-content {
+    .text-container {
+      .login-title {
+        font-size: 28px;
+        font-weight: 500;
+        color: #1f1f1f;
+        margin: 0 0 8px 0;
+        line-height: 1.2;
+        font-family: "Knowledge2017", -apple-system, BlinkMacSystemFont,
+          "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+      }
+
+      .required-field-note {
+        font-size: 14px;
+        color: #666666;
+        margin: 0;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+// Form Styles
+.login-form-container {
+  padding: 32px;
+}
+
+.form-wrapper {
+  width: 100%;
+}
+
+.login-form {
+  width: 100%;
+}
+
+.input-section {
+  margin-bottom: 24px;
+}
+
+.input-wrapper {
+  width: 100%;
+}
+
+.input-container {
+  position: relative;
+  width: 100%;
+}
+
+.input-label {
+  position: absolute;
+  top: -8px;
+  left: 12px;
+  background-color: #ffffff;
+  padding: 0 4px;
+  font-size: 14px;
+  color: #1f1f1f;
+  font-weight: 400;
+  z-index: 1;
+  transition: all 0.2s ease;
+}
+
+.input-field {
+  width: 100%;
+  height: 48px;
+  border: 1px solid #737373;
+  border-radius: 6px;
+  padding: 0 16px;
+  font-size: 16px;
+  color: #1f1f1f;
+  background-color: #ffffff;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+
+  &:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  }
+
+  &:focus + .input-label-dynamic,
+  &:not(:placeholder-shown) + .input-label-dynamic {
+    opacity: 0;
+  }
+
+  &::placeholder {
+    color: #9ca3af;
+  }
+}
+
+.input-label-dynamic {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  color: #666666;
+  font-size: 16px;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  opacity: 1;
+}
+
+// CSS Variables
+:root {
+  --spacing-3: 16px;
+  --primary-color: #d64000;
+  --button-font-color: #ffffff;
+}
+
+// Button Styles
+.button-container {
+  margin-top: var(--spacing-3);
+}
+
+.rebrand form button[value="default"],
+.sign-in-button {
+  background-color: #d64000 !important;
+  box-sizing: border-box;
+  color: #ffffff !important;
+  font: 500 16px / 150% SourceSans3, Helvetica Neue, Arial, sans-serif !important;
+  padding: 8px 16px;
+  width: auto;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 0;
+
+  &:hover:not(:disabled) {
+    background-color: #b8360a !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(214, 64, 0, 0.3);
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(214, 64, 0, 0.3);
+  }
+
+  &:disabled {
+    background-color: #9ca3af !important;
+    cursor: not-allowed;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(214, 64, 0, 0.2);
+  }
+}
+
+// Background Decoration
+.background-decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("https://app-data.gcs.trstatic.net/emcm-ui/bundle-profile/bundle-profile-assets/img/250611-dcl_waypoint_graphics-bg.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+  opacity: 0.8;
+  z-index: 1;
+  pointer-events: none;
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .rebrand-header {
+    padding: 0 16px;
+    height: 56px;
+
+    .rebrand-name {
+      font-size: 14px;
+    }
+
+    .rebrand-separator {
+      display: none;
+    }
+  }
+
+  .ci-login-content {
+    padding: 20px 16px;
+  }
+
+  .login-card {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .login-card-header {
+    padding: 32px 24px 20px;
+  }
+
+  .login-form-container {
+    padding: 24px;
+  }
+
+  .login-title {
+    font-size: 24px;
+  }
+
+  .background-decoration {
+    background-position: right top;
+    background-size: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .rebrand-header {
+    .rebrand-logo img {
+      height: 20px;
+    }
+
+    .rebrand-name {
+      font-size: 12px;
+    }
+  }
+
+  .login-title {
+    font-size: 20px;
+  }
+
+  .background-decoration {
+    opacity: 0.4;
+  }
+}
+
+// Footer Styles
+.loginFooter {
+  position: relative;
+  z-index: 2;
+}
+
+.tr-GlobalFooter {
+  background-color: #1f1f1f;
+  color: #ffffff;
+  padding: 0;
+}
+
+.tr-GlobalFooter-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
+}
+
+.tr-GlobalFooter-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+.tr-GlobalFooter-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
+  img {
+    height: 24px;
+    width: auto;
+  }
+}
+
+.tr-GlobalFooter-button {
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  &:focus {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+  }
+}
+
+.tr-GlobalFooter-caret {
+  display: flex;
+  align-items: center;
+}
+
+.tr-Svg {
+  display: flex;
+  align-items: center;
+}
+
+.tr-Svg-inner {
+  display: flex;
+  align-items: center;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.2s ease;
+  }
+}
+
+.tr-GlobalFooter-nav {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+
+  &.expanded {
+    max-height: 200px;
+    padding-top: 16px;
+  }
+}
+
+.tr-GlobalFooter-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.tr-GlobalFooter-nav.expanded .tr-GlobalFooter-items {
+  display: flex;
+}
+
+.tr-GlobalFooterItem {
+  margin: 0;
+}
+
+.tr-GlobalFooterItem-inner {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.5;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #dc5a28;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+}
+
+// Footer Responsive Design
+@media (max-width: 768px) {
+  .tr-GlobalFooter-inner {
+    padding: 12px 16px;
+  }
+
+  .tr-GlobalFooter-items {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .tr-GlobalFooter-nav {
+    &.expanded {
+      max-height: 300px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .tr-GlobalFooter-top {
+    padding: 4px 0;
+  }
+
+  .tr-GlobalFooter-logo img {
+    height: 20px;
+  }
+}

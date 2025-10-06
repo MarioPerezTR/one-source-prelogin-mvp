@@ -136,6 +136,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-top: var(--saf-spacing-6); // 24px spacing
   }
 
   .sign-in-button {
@@ -147,15 +148,6 @@
   .thomson-reuters-container {
     flex: 1;
     max-width: 100%;
-  }
-
-  ::ng-deep .sign-in-button::part(control) {
-    width: 100%;
-  }
-
-  ::ng-deep .sign-in-button::part(content) {
-    margin: auto;
-    justify-content: center;
   }
 
   .thomson-reuters-container {
@@ -191,4 +183,16 @@
       justify-content: center;
     }
   }
+}
+.sign-in-button {
+  width: 100%;
+}
+
+::ng-deep .sign-in-button::part(control) {
+  width: 100%;
+}
+
+::ng-deep .sign-in-button::part(content) {
+  margin: auto;
+  justify-content: center;
 }

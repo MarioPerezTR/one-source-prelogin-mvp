@@ -10,11 +10,11 @@
         placeholder="Select language"
         [value]="selectedLanguage.name"
         (change)="onLanguageChange($event)"
-        (open)="onDropdownOpen()"
         aria-labelledby="language-label"
         a11y-aria-description="Select your preferred language"
         search-offline="false"
         autocomplete="off"
+        open-on-focus="false"
         class="language-combobox"
       >
         <saf-option

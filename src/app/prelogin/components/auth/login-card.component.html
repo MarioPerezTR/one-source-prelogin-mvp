@@ -17,7 +17,7 @@
   </div>
 
   <div class="card-body">
-    <form class="login-form">
+    <form class="login-form" (ngSubmit)="onSubmit()">
       <div class="input-container">
         <saf-text-field
           [label]="'login.email' | translate"
@@ -25,6 +25,7 @@
           density="standard"
           name="email"
           type="email"
+          [value]="email"
           a11y-aria-description="Enter your Thomson Reuters ONESOURCE email address"
         >
         </saf-text-field>
@@ -37,6 +38,7 @@
           density="standard"
           name="password"
           type="password"
+          [value]="password"
           a11y-aria-description="Enter your secure password for ONESOURCE account"
           autocomplete="current-password"
         >
@@ -64,21 +66,20 @@
         >
       </div>
     </form>
+
+    <saf-button
+      appearance="primary"
+      density="standard"
+      class="sign-in-button"
+      type="button"
+      (click)="onSubmit()"
+      a11y-aria-description="Sign in to your Thomson Reuters ONESOURCE account"
+    >
+      {{ "login.button" | translate }}
+    </saf-button>
   </div>
 
   <div class="card-footer">
-    <div class="buttons">
-      <saf-button
-        appearance="primary"
-        density="standard"
-        class="sign-in-button"
-        type="submit"
-        a11y-aria-description="Sign in to your Thomson Reuters ONESOURCE account"
-      >
-        {{ "login.button" | translate }}
-      </saf-button>
-    </div>
-
     <!-- Thomson Reuters login Container -->
     <div class="thomson-reuters-container">
       <p class="upgrade-message">
@@ -89,6 +90,7 @@
         density="standard"
         class="thomson-reuters-button"
         a11y-aria-description="Sign in with Thomson Reuters account using just your email"
+        (click)="openCiLogin()"
       >
         {{ "login.thomson_reuters_button" | translate }}
       </saf-button>

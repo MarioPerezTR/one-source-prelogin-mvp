@@ -148,13 +148,6 @@ export class LanguageBannerComponent implements OnInit {
     console.log('Language changed via click to:', language);
   }
 
-  onDropdownOpen() {
-    console.log('Dropdown opened, forcing z-index fix');
-    setTimeout(() => {
-      this.fixDropdownZIndex();
-    }, 10);
-  }
-
   onLanguageChange(event: any) {
     const selectedValue = event.detail?.value || event.target?.value;
     if (selectedValue) {
